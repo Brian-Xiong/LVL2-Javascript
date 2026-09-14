@@ -117,6 +117,12 @@ console.log("In stock: " + inStock);
 //   X             → rename to something descriptive, then declare it
 //   GaMeLeVeL     → fix the casing
 
+const secondPlayer = "Alice"; // Fixed to start with a letter instead of a number
+const myScore = 100; // Fixed to remove the and be camel case
+const nameX = "Bob"; // Renamed to something descriptive
+const gameLevel = 1; // Fixed to be camel case
+
+
 // ----------------------------------------------------------
 // TASK 7 — Two-step declaration
 // ----------------------------------------------------------
@@ -131,6 +137,15 @@ console.log("In stock: " + inStock);
 //
 // You should see three console lines: undefined → 500 → 750
 
+let highScore;
+console.log(highScore); // highScore is undefined
+
+highScore = 500;
+console.log(highScore); // highScore is now set to 500
+
+highScore = 750;
+console.log(highScore); // highScore is now set to 750
+
 // ----------------------------------------------------------
 // TASK 8 — Connect the variables
 // ----------------------------------------------------------
@@ -141,6 +156,8 @@ console.log("In stock: " + inStock);
 //
 // Log: appName + " v" + version + " — built by " + authorName
 // Expected format: "TaskMaster v3 — built by [your name]"
+
+
 
 // ----------------------------------------------------------
 // ⭐ STRETCH GOAL
