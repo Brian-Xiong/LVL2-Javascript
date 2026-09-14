@@ -23,6 +23,16 @@
 //
 // Log all four to the console.
 
+const fullName = "Brian Xiong"; // fullName is a constant because it will not change
+let age = 30; // age is a let because it can change over time
+let city = "San Francisco"; // city is a let because it can change if I move
+let isStudent = true; // isStudent is a let because once I finish this course, I will no longer be a student
+
+console.log(fullName);
+console.log(age);
+console.log(city);
+console.log(isStudent);
+
 // ----------------------------------------------------------
 // TASK 2 — Update what can change
 // ----------------------------------------------------------
@@ -32,6 +42,13 @@
 //
 // Then try to reassign fullName.
 // Read the error, then comment that line out.
+city = "Los Angeles";
+isStudent = false;
+
+console.log(city);
+console.log(isStudent);
+
+// fullName = "New Name"; // This line will throw an error because fullName is a const and cannot be reassigned.
 
 // ----------------------------------------------------------
 // TASK 3 — Undefined in the wild
@@ -41,6 +58,11 @@
 //
 // Now assign it a movie title.
 // Log it again.
+
+let favoriteMovie;
+console.log(favoriteMovie); // undefined
+favoriteMovie = "The Matrix";
+console.log(favoriteMovie); // "The Matrix"
 
 // ----------------------------------------------------------
 // TASK 4 — Build a product listing

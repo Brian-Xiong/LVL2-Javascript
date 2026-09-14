@@ -57,10 +57,10 @@
 //   isActive → true                 (boolean)
 
 const contact1 = {
-  name: "Alex Rivera",
-  age: 22,
-  email: "alex@gmail.com",
-  city: "Austin",
+  name: "Brian",
+  age: 30,
+  email: "brian@gmail.com",
+  city: "Cleveland",
   isActive: true,
 };
 
@@ -78,11 +78,11 @@ const contact1 = {
 // Log contact1["email"] using bracket notation.
 // Log: "Is " + contact1.name + " active? " + contact1.isActive
 
-// console.log("Entire Object 1:", contact1, " and Entire Object 2", contact2);
 console.log(contact1.name);
 console.log(contact1["email"]);
-console.log("Is " + contact1.name + " active? " + contact1.isActive);
+console.log("Is " + contact1.name + " Active? " + contact1.isActive);
 
+// console.log("Entire Object 1:", contact1, " and Entire Object 2", contact2);
 // TASK 2
 // Declare a const called contact2 with the same properties
 // but different values (a different made-up person).
@@ -91,16 +91,14 @@ console.log("Is " + contact1.name + " active? " + contact1.isActive);
 //   "📇 " + contact2.name + " | " + contact2.city + " | " + contact2.email
 
 const contact2 = {
-  name: "Bill Hill",
-  age: 30,
-  email: "bh@gmail.com",
-  city: "Dallas",
+  name: "John Doe",
+  age: 33,
+  email: "johndoe@gmail.com",
+  city: "Houston",
   isActive: true,
 };
 
-console.log(
-  "📇 " + contact2.name + " | " + contact2.city + " | " + contact2.email,
-);
+console.log("📇 " + contact2.name + " | " + contact2.city + " | " + contact2.email);
 
 // ----------------------------------------------------------
 // PART 2 — ADDING, UPDATING, AND DELETING PROPERTIES
@@ -119,9 +117,9 @@ console.log(
 //   - Delete the isActive property
 //
 // Log the full object after each change to see it update.
-contact1.phone = "123456"; // add
-contact1.city = "NYC"; // update
-delete contact1.isActive; // delete
+contact1.phone = "555-1234";
+contact1.city = "Miami";
+delete contact1.isActive;
 
 console.log(contact1);
 
