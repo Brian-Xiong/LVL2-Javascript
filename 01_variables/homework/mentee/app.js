@@ -78,6 +78,18 @@ console.log(favoriteMovie); // "The Matrix"
 // Log each variable on its own line.
 // Then log: productName + " by " + productBrand + " — $" + productPrice
 
+const productName = "Xbox";
+const productBrand = "Microsoft";
+const productPrice = 300;
+let inStock = true;
+
+console.log(productName);
+console.log(productBrand);
+console.log(productPrice);
+console.log(inStock);
+console.log(productName + " by " + productBrand + " — $" + productPrice);
+
+
 // ----------------------------------------------------------
 // TASK 5 — Stock status update
 // ----------------------------------------------------------
@@ -88,6 +100,11 @@ console.log(favoriteMovie); // "The Matrix"
 // Read the error and comment the line out.
 // Why did this fail but inStock worked?
 // Write your answer as a comment.
+
+inStock = false;
+console.log("In stock: " + inStock);
+
+// productName = "PlayStation"; // This line will throw an error because productName is a const and cannot be reassigned. inStock worked because it was declared with let, which allows reassignment.
 
 // ----------------------------------------------------------
 // TASK 6 — Fix the bad names
