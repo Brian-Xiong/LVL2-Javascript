@@ -157,7 +157,11 @@ console.log(highScore); // highScore is now set to 750
 // Log: appName + " v" + version + " — built by " + authorName
 // Expected format: "TaskMaster v3 — built by [your name]"
 
+const appName = "TaskMaster";
+const version = 3;
+const authorName = "Brian Xiong";
 
+console.log(appName + " v" + version + " — built by " + authorName);
 
 // ----------------------------------------------------------
 // ⭐ STRETCH GOAL
@@ -171,3 +175,12 @@ console.log(highScore); // highScore is now set to 750
 // Then reassign currentYear... wait, can you? Why not?
 // Write the answer as a comment.
 // What keyword would you need if currentYear could change?
+
+const startYear = 2020;
+const currentYear = 2025;
+let yearsRunning = currentYear - startYear;
+
+console.log(appName + " has been running for " + yearsRunning + " years.");
+
+// currentYear = 2026;
+// currentYear cannot be reassigned because it is declared as a const. If currentYear could change, it would need to be declared with let instead of const.
