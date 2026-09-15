@@ -56,7 +56,10 @@ console.log(getMemberLabel("bronze")); // ❌ undefined
 console.log(getMemberLabel()); // ❌ undefined
 
 // Bug 1 ↓
+// console.log(getMemberLabel("bronze")); returns undefined because there is no condition for "bronze" tier in the function.
 
 // Bug 2 ↓
 
 // Your fix ↓
+// add an if statement for the bronze tier and return the correct label
+// add a default return statement for when no tier is provided, returning "other" or a message indicating no tier was specified.
