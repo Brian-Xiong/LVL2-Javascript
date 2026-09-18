@@ -17,8 +17,12 @@ storeName = "MegaShop";
 console.log(storeName);
 
 // What's wrong ↓
+// storeName is a const and cannot be changed/edited
+
 
 // Your fix ↓
+// declare storeName as a let instead of a const
+// EX: let storeName = "TechMart";
 
 
 // ----------------------------------------------------------
