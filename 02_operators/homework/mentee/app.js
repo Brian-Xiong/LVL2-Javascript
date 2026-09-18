@@ -23,6 +23,15 @@
 //
 // Log: gameName + " — Player: " + playerName
 
+const gameName = "Space Blaster"; // const because the game name won't change
+let playerName = "Your Name"; // let because the player name could change
+let playerScore = 0; 
+let highScore = 850;
+const pointsPerKill = 25;
+let livesRemaining = 3; // let because lives can change
+
+console.log(gameName + " — Player: " + playerName);
+
 // ----------------------------------------------------------
 // TASK 2 — Earn points
 // ----------------------------------------------------------
@@ -32,6 +41,12 @@
 //
 // Log: "Earned: " + totalEarned + " points"
 // Log: "Score: " + playerScore
+
+totalEarned = 6 * pointsPerKill;
+playerScore += totalEarned;
+
+console.log("Earned: " + totalEarned + " points");
+console.log("Score: " + playerScore);
 
 // ----------------------------------------------------------
 // TASK 3 — Take damage
@@ -43,6 +58,13 @@
 // Then log the result of: livesRemaining > 0
 // Write a comment: what does true/false mean in this context?
 
+livesRemaining -= 1;
+livesRemaining -= 1;
+
+console.log("Lives remaining: " + livesRemaining);
+console.log(livesRemaining > 0); // true means the player still has lives left, false means the player has no lives left
+
+
 // ----------------------------------------------------------
 // TASK 4 — Level bonus
 // ----------------------------------------------------------
@@ -52,6 +74,8 @@
 //
 // Log: "Bonus: " + levelBonus
 // Log: "Score after bonus: " + playerScore
+
+
 
 // ----------------------------------------------------------
 // TASK 5 — Check the high score
