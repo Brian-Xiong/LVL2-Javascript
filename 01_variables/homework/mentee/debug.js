@@ -36,8 +36,11 @@ let orderTotal = item1Price + Item2Price;
 console.log("Total: $" + orderTotal);
 
 // What's wrong ↓
+// the variable name "Item2Price" is capitalized incorrectly. JavaScript is case-sensitive, so it should be "item2Price"
 
 // Your fix ↓
+// lowercase the "I" in "Item2Price" to match the variable name declared above. It should be "item2Price"
+// EX: let orderTotal = item1Price + item2Price;
 
 
 // ----------------------------------------------------------
@@ -53,7 +56,11 @@ console.log(productName + " — $" + productPrice);
 
 // Hint: the code works, but what keyword should you be using instead?
 // Why is the current keyword considered bad practice?
+// 
 
 // What's wrong ↓
+// 
 
 // Your fix ↓
+// 
+
