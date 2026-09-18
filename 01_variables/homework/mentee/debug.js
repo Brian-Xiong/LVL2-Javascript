@@ -56,11 +56,13 @@ console.log(productName + " — $" + productPrice);
 
 // Hint: the code works, but what keyword should you be using instead?
 // Why is the current keyword considered bad practice?
-// 
+// the current keyword "var" is considered bad practice because it has function scope and can lead to unexpected behavior due to hoisting. It's better to use "let" or "const" for block-scoped variables, which helps prevent bugs and makes the code more predictable.
 
 // What's wrong ↓
-// 
+// the variables are being declared with "var" instead of "let" or "const". Using "var" can lead to issues with variable scope and hoisting, which can cause unexpected behavior in larger codebases. It's better to use "let" for variables that may change and "const" for variables that should not change.
 
 // Your fix ↓
-// 
+// replace var with "const" or "let"
+// EX: const productName = "Headphones";
+// EX: const productPrice = 49.99;
 
