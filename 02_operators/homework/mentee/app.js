@@ -123,6 +123,12 @@ console.log("New high score: " + highScore);
 // Log: "Time left: " + minutes + " min " + secondsLeft + " sec"
 // ⚠️ minutes will be a decimal — that's expected. We'll fix it in Data Types.
 
+const totalSeconds = 245;
+const minutes = totalSeconds / 60;
+const secondsLeft = totalSeconds % 60;
+
+console.log("Time left: " + minutes + " min " + secondsLeft + " sec");
+
 // ----------------------------------------------------------
 // TASK 8 — Connect the dots summary
 // ----------------------------------------------------------
