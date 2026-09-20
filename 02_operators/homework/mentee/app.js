@@ -92,6 +92,10 @@ console.log("Score after bonus: " + playerScore);
 //   playerScore === highScore     → prediction:
 //   playerScore >= highScore      → prediction:
 
+console.log(playerScore > highScore); // prediction: true, because playerScore is 225 and highScore is 850
+console.log(playerScore === highScore); // prediction: false, because playerScore is 225 and highScore is 850
+console.log(playerScore >= highScore); // prediction: true, because playerScore is 225 and highScore is 850
+
 // ----------------------------------------------------------
 // TASK 6 — Update the high score
 // ----------------------------------------------------------
