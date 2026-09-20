@@ -75,6 +75,11 @@ console.log(livesRemaining > 0); // true means the player still has lives left, 
 // Log: "Bonus: " + levelBonus
 // Log: "Score after bonus: " + playerScore
 
+const levelBonus = playerScore *0.5;
+playerScore += levelBonus;
+
+console.log("Bonus: " + levelBonus);
+console.log("Score after bonus: " + playerScore);
 
 
 // ----------------------------------------------------------
