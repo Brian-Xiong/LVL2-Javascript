@@ -107,6 +107,11 @@ console.log(playerScore >= highScore); // prediction: true, because playerScore 
 // Then reassign highScore to playerScore.
 // Log: "New high score: " + highScore
 
+console.log(playerScore > highScore); // false, because playerScore is 225 and highScore is 850
+highScore = playerScore;
+console.log("New high score: " + highScore);
+
+
 // ----------------------------------------------------------
 // TASK 7 — Time remaining (modulus practice)
 // ----------------------------------------------------------
