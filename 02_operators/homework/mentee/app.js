@@ -141,6 +141,13 @@ console.log("Time left: " + minutes + " min " + secondsLeft + " sec");
 // Then log whether the player beat the original highScore (850):
 // endScore > 850
 
+const startScore = 0;
+const endScore = playerScore;
+const improvement = endScore - startScore;
+
+console.log(playerName + " improved by " + improvement + " points this session.");
+console.log(endScore > 850); // false, because endScore is 225 and highScore is 850
+
 // ----------------------------------------------------------
 // ⭐ STRETCH GOAL — Accuracy Rating
 // ----------------------------------------------------------
