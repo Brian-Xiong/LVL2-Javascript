@@ -37,9 +37,10 @@ countdown -= 1;
 console.log("Countdown: " + countdown);
 
 // What's wrong ↓
+// the variable coutdown is declared with a const, which means it cannot be reassigned. It should be declared with let instead.
 
 // Your fix ↓
-
+// let countdown = 10;
 
 // ----------------------------------------------------------
 // 🔴 DEBUG 3 — Hard
