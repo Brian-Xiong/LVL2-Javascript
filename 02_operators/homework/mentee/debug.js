@@ -17,8 +17,11 @@ const tipAmount  = billAmount % tipPercent;
 console.log("Tip: $" + tipAmount);
 
 // What's wrong ↓
+// billAmount should be multiplied by tipPercent and then divided by 100 to calculate the tip amount, not using the modulus operator.
 
 // Your fix ↓
+// const tipAmount = (billAmount * tipPercent) / 100;
+// console.log("Tip: $" + tipAmount);
 
 
 // ----------------------------------------------------------
