@@ -167,3 +167,14 @@ console.log(endScore > 850); // false, because endScore is 225 and highScore is 
 // Bonus question (write as a comment):
 // accuracyPercent will have many decimal places. What do you think
 // we could use to round it to 2 decimal places? (Hint: coming in Data Types)
+
+const shotsFired = 40;
+const shotsHit = 31;
+
+const accuracyDecimal = shotsHit / shotsFired;
+const accuracyPercent = accuracyDecimal *100;
+
+console.log(playerName + " accuracy: " + accuracyPercent + "%");
+console.log(accuracyPercent >= 75); // false, because accuracyPercent is 77.5 and 77.5 is greater than 75
+
+// Bonus answer: We could use the toFixed() method to round accuracyPercent to 2 decimal places. 
