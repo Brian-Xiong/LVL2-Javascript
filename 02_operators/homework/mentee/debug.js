@@ -55,9 +55,17 @@ var username2 = "Gamer99";
 console.log("Names match: " + (username1 == username2));
 
 // Logic bug ↓
+// The comparison is case-sensitive, so "gamer99" and "Gamer99" are not equal. To fix this, we can convert both usernames to the same case (e.g., lowercase) before comparing.
 
 // Style issue 1 ↓
+// both variables are declared with `var`, which is outdated. It's better to use `let` or `const` for variable declarations to avoid issues with scope and hoisting.
+// const username1 = "gamer99";
+// const username2 = "Gamer99";
 
 // Style issue 2 ↓
+// The console.log statement is using string concatenation with the + operator. It's more modern and readable to use template literals for string interpolation.
 
 // Your fix ↓
+let username1 = "gamer99";
+let username2 = "Gamer99";
+console.log("Names match: " + (username1 == username2));
