@@ -100,6 +100,17 @@ console.log('Discount code: ' + cleanCode);
 
 console.log("\n--- Task 2: Convert Prices ---");
 // your code here
+const price1 = parseFloat(item1Price);
+console.log(`${item1Name} price type before: ${typeof item1Price}`);
+console.log(`${item1Name} price type after:  ${typeof price1}`);
+
+const price2 = parseFloat(item2Price);
+console.log(`${item2Name} price type before: ${typeof item2Price}`);
+console.log(`${item2Name} price type after:  ${typeof price2}`);
+
+const price3 = parseFloat(item3Price);
+console.log(`${item3Name} price type before: ${typeof item3Price}`);
+console.log(`${item3Name} price type after:  ${typeof price3}`);
 
 // ----------------------------------------------------------
 // TASK 3 — Calculate line totals
