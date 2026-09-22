@@ -132,6 +132,17 @@ console.log(`${item3Name} price type after:  ${typeof price3}`);
 
 console.log("\n--- Task 3: Line Totals ---");
 // your code here
+const line1Total = price1 * item1Qty;
+console.log(`${item1Name} x ${item1Qty} = $${line1Total.toFixed(2)}`);
+const line2Total = price2 * item2Qty;
+console.log(`${item2Name} x ${item2Qty} = $${line2Total.toFixed(2)}`);
+const line3Total = price3 * item3Qty;
+console.log(`${item3Name} x ${item3Qty} = $${line3Total.toFixed(2)}`);
+
+const subtotal = line1Total + line2Total + line3Total;
+console.log(`Subtotal: ${subtotal.toFixed(2)}`);
+
+// item1Price is a string and multiplying a string by a number would result in Not a Number (NAN) output.  So you have to comvert it to a number first using parseFloat()
 
 // ----------------------------------------------------------
 // TASK 4 — Apply discount and tax
