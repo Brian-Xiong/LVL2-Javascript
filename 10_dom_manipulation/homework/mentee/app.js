@@ -171,8 +171,24 @@ function createTaskCard(task) {
 // Call renderBoard(tasks) at the bottom.
 
 function renderBoard(taskList) {
-  // your code here
+  const todoList = document.getElementById("list-todo");
+  const inProgressList = document.getElementById("list-inprogress");
+  const doneList = document.getElementById("list-done");
+
+  taskList.forEach((task) => {
+    const list = document.createElement("li");
+    createTaskCard(task);
+    if (task.status === "todo") {
+      todoList.appendChild(list);
+    } else if (task.status === "inprogress") {
+      inProgressList.appendChild(list);
+    } else if (task.status === "done") {
+      doneList.appendChild(list);
+    }
+  });
 }
+
+renderBoard(tasks);
 
 // ----------------------------------------------------------
 // TASK 4 — updateCounts
