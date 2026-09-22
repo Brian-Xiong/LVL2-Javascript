@@ -92,8 +92,13 @@ const boardName = "Sprint 12 — Task Board";
 // Call renderHeader(tasks) at the bottom.
 
 function renderHeader(taskList) {
-  // your code here
+  const pageTitle = document.getElementById("board-title");
+  const taskCount = document.getElementById("task-count");
+  pageTitle.textContent = boardName; // set the title of the page to "Sprint 12 - Task Board" 
+  taskCount.textContent = `${taskList.length} tasks`; // display the amount of tasks in the talk list
 }
+
+renderHeader(tasks);
 
 // ----------------------------------------------------------
 // TASK 2 — createTaskCard  (returns a DOM element)
