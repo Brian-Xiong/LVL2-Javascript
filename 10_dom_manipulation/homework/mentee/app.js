@@ -131,7 +131,24 @@ renderHeader(tasks);
 // Task 3 will handle placing it in the right column.
 
 function createTaskCard(task) {
-  // your code here
+  // Part 1)
+  const li = document.getElementById("task-card");
+  li.dataset.id = task.id;
+
+  // Part 2)
+  const title = document.getElementById("task-title");
+  title.textContent = task.title;
+
+  // Part 3)
+  const meta = document.getElementById("task-meta"); // I'm pretty sure this is right
+  const priority = document.createElement("span"); // idk if this is right...
+  priority.textContent = task.priority.toUpperCase();
+  priority.classList.add(`priority-${task.priority}`);
+
+  const assignee = document.createElement("span");
+  assignee.textContent = `👤 ${task.assignee}`;
+
+  return li;
 }
 
 // ----------------------------------------------------------
