@@ -65,6 +65,24 @@ const orderStatus = null; // not yet processed
 console.log("--- Task 1: Clean the Data ---");
 // your code here
 
+// a) Clean storeName
+const cleanStore = storeName.trim().toLowerCase(); // convert all the letters in the string to lowercase and remove whitespace
+const titleStore = cleanStore[0].toUpperCase() + cleanStore.slice(1); // capitalize only the first letter of the string
+console.log('store: ' + titleStore);
+
+// b) Clean customerName
+const cleanCustomer = customerName.trim().toLowerCase(); // convert all the letters in the string to lowercase and remove whitespace
+const titleCustomer = cleanCustomer[0].toUpperCase() + cleanCustomer.slice(1); // capitalize only the first letter of the string
+console.log('customer: ' + titleCustomer);
+
+// c) Clean customerEmail
+const cleanEmail = customerEmail.trim().toLowerCase(); // convert all the letters in the string to lowercase and remove whitespace
+console.log('Email: ' + cleanEmail);
+
+// d) Clean discountCode
+const cleanCode = discountCode.trim().toUpperCase(); // convert all the letters in the string to uppercase and remove whitespace
+console.log('Discount code: ' + cleanCode);
+
 // ----------------------------------------------------------
 // TASK 2 — Convert prices to numbers
 // ----------------------------------------------------------
