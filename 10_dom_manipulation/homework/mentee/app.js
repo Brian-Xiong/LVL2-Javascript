@@ -235,12 +235,13 @@ updateCounts(tasks);
 
 function addRemoveButtons() {
   const allElements = document.querySelectorAll("task-card");
-  allElements.forEach((element) => 
   
-  console.log(""));
-
-
-}
+  // I think the following 4 lines are right
+  allElements.forEach((element) => {
+  element.classList.add("remove-btn");
+  element.textContent("X");
+  parent.appendChild(element);
+});
 
 addRemoveButtons();
 // ----------------------------------------------------------
