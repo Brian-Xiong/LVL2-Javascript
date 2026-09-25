@@ -242,6 +242,7 @@ function addRemoveButtons() {
   element.textContent("X");
   parent.appendChild(element);
 });
+}
 
 addRemoveButtons();
 
@@ -304,7 +305,21 @@ function addNewTask(title, assignee, priority = "medium", status = "todo") {
   // 2) Push new task into tasks array
   tasks.push(newtask);
 
-  
+  // 3) call createTaskCard
+  const newCard = createTaskCard(newTask);
+
+  // 4) append card to correct list based on status
+  const list = document.querySelector(`#list-${status}`);
+  list.appendChild(newCard);
+
+  // 5) call updateCounts
+  updateCounts(tasks);
+
+  // 6) make sure the new card has a remove button 
+  addRemoveButtons();
+
+  // 7) if the new card is a high priority, then bold the card
+  highlightHighPriority();
 
 }
 
@@ -354,4 +369,3 @@ function renderAll() {
 // CALL YOUR FUNCTIONS HERE
 // ============================================================
 
-addNewTask("Test","Any", "Low Prio", "Todo");
