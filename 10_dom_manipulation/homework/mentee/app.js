@@ -342,7 +342,11 @@ function addNewTask(title, assignee, priority = "medium", status = "todo") {
 // each function individually.
 
 function renderAll() {
-  // your code here
+  renderHeader(tasks)
+  renderBoard(tasks)
+  updateCounts(tasks)
+  addRemoveButtons()
+  highlightHighPriority()
 }
 
 // ----------------------------------------------------------
