@@ -244,6 +244,7 @@ function addRemoveButtons() {
 });
 
 addRemoveButtons();
+
 // ----------------------------------------------------------
 // TASK 6 — highlightHighPriority
 // ----------------------------------------------------------
@@ -259,8 +260,16 @@ addRemoveButtons();
 // This makes high-priority labels appear bolder.
 
 function highlightHighPriority() {
-  // your code here
+  const HighPrio = document.querySelectorAll("priority-high");
+
+  // Ok this looks right to me
+  HighPrio.forEach((element) => {
+    const li = document.createElement("li");
+    li.style.fontWeight = "800";
+  });
 }
+
+highlightHighPriority();
 
 // ----------------------------------------------------------
 // TASK 7 — addNewTask  (createElement full workflow)
