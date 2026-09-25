@@ -234,9 +234,15 @@ updateCounts(tasks);
 // For now just build and attach the buttons so they appear.
 
 function addRemoveButtons() {
-  // your code here
+  const allElements = document.querySelectorAll("task-card");
+  allElements.forEach((element) => 
+  
+  console.log(""));
+
+
 }
 
+addRemoveButtons();
 // ----------------------------------------------------------
 // TASK 6 — highlightHighPriority
 // ----------------------------------------------------------
