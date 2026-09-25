@@ -292,8 +292,23 @@ highlightHighPriority();
 // Watch a new card appear in the To Do column with a ✕ button.
 
 function addNewTask(title, assignee, priority = "medium", status = "todo") {
-  // your code here
+  // 1) create a new task object
+  const newTask = {
+    id: Date.now(),
+    title: title,
+    assignee: assignee,
+    priority: "medium",
+    status: "todo",
+  };
+
+  // 2) Push new task into tasks array
+  tasks.push(newtask);
+
+  
+
 }
+
+
 
 // ----------------------------------------------------------
 // TASK 8 — Connect the dots: renderAll
@@ -338,3 +353,5 @@ function renderAll() {
 // ============================================================
 // CALL YOUR FUNCTIONS HERE
 // ============================================================
+
+addNewTask("Test","Any", "Low Prio", "Todo");
