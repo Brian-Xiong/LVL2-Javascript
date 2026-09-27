@@ -171,6 +171,12 @@ const discountedSubtotal = subtotal - discountAmount;
 console.log("Discount (10%): -$" + discountAmount.toFixed(2));
 console.log("After discount: $" + discountedSubtotal.toFixed(2));
 
+// Part b)
+const taxAmount = discountedSubtotal * taxRate;
+const grandTotal = discountedSubtotal + taxAmount;
+console.log("Tax (8%): $" +taxAmount.toFixed(2));
+console.log("Grand Total: $" +grandTotal.toFixed(2));
+
 
 // ----------------------------------------------------------
 // TASK 5 — Type checks and edge cases
