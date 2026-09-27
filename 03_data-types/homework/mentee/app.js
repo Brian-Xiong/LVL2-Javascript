@@ -177,6 +177,9 @@ const grandTotal = discountedSubtotal + taxAmount;
 console.log("Tax (8%): $" +taxAmount.toFixed(2));
 console.log("Grand Total: $" +grandTotal.toFixed(2));
 
+// Part c)
+const isValidCode = discountCode.trim().toUpperCase() === "SAVE10";
+console.log("Discount code valid: " + isValidCode);
 
 // ----------------------------------------------------------
 // TASK 5 — Type checks and edge cases
