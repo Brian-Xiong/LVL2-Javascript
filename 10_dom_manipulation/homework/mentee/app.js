@@ -369,7 +369,12 @@ function renderAll() {
 //
 // Write a comment: what is dataset used for?
 
+function markComplete(taskId) {
+  const taskArray = document.getElementById();
+}
+
 // ============================================================
 // CALL YOUR FUNCTIONS HERE
 // ============================================================
 
+markComplete();
