@@ -164,8 +164,13 @@ console.log(`Subtotal: ${subtotal.toFixed(2)}`);
 //    Log: `Discount code valid: ${isValidCode}`
 //    (No if/else yet — just log the boolean value)
 
+// Part a)
 console.log("\n--- Task 4: Discount and Tax ---");
-// your code here
+const discountAmount = subtotal * 0.1;
+const discountedSubtotal = subtotal - discountAmount;
+console.log("Discount (10%): -$" + discountAmount.toFixed(2));
+console.log("After discount: $" + discountedSubtotal.toFixed(2));
+
 
 // ----------------------------------------------------------
 // TASK 5 — Type checks and edge cases
