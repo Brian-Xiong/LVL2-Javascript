@@ -206,7 +206,11 @@ console.log("\n--- Task 5: Type Checks ---");
 console.log(`typeof line1Total: ${typeof line1Total}`);
 console.log(`typeof grandTotal: ${typeof grandTotal}`);
 
-
+// part b)
+console.log(`orderStatus: ${typeof orderStatus}`);
+console.log(`typeof orderStatus: ${typeof orderStatus}`);
+console.log(`Boolean(orderStatus): ${Boolean(orderStatus)}`);
+// orderStatus is null because it is not assigned a value 
 
 
 
