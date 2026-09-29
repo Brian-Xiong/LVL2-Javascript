@@ -212,6 +212,10 @@ console.log(`typeof orderStatus: ${typeof orderStatus}`);
 console.log(`Boolean(orderStatus): ${Boolean(orderStatus)}`);
 // orderStatus is null because it is not assigned a value 
 
+// part c)
+console.log(`Item1Price + Item2Price = ${item1Price + item2Price}`);
+// the result is "79.9944.99" because both of the imputs are strings so having the plus (+) between the two strings will concatenate the two strings together
+// if we want to add the numbers together, then at least one of the inputs has to be a typeof number
 
 
 // ----------------------------------------------------------
