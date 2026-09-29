@@ -23,11 +23,11 @@ const customerName = "alex rivera";
 const customerEmail = "  ALEX@PIXELGADGETS.COM  ";
 
 const item1Name = "wireless headphones";
-const item1Price = "79.99"; // string — from form input
+let item1Price = "79.99"; // string — from form input
 const item1Qty = 2;
 
 const item2Name = "usb-c hub";
-const item2Price = "44.99"; // string — from form input
+let item2Price = "44.99"; // string — from form input
 const item2Qty = 1;
 
 const item3Name = "desk lamp";
@@ -213,7 +213,8 @@ console.log(`Boolean(orderStatus): ${Boolean(orderStatus)}`);
 // orderStatus is null because it is not assigned a value 
 
 // part c)
-console.log(`Item1Price + Item2Price = ${item1Price + item2Price}`);
+console.log(`Item1Price(string) + Item2Price(string)= ${item1Price + item2Price}`);
+console.log(`Item1Price(number) + Item2Price (number) = ${Number(item1Price) + Number(item2Price)}`);
 // the result is "79.9944.99" because both of the imputs are strings so having the plus (+) between the two strings will concatenate the two strings together
 // if we want to add the numbers together, then at least one of the inputs has to be a typeof number
 
@@ -238,7 +239,7 @@ console.log(`Item1Price + Item2Price = ${item1Price + item2Price}`);
 // (Use the clean variables from Task 1)
 
 console.log("\n--- Task 6: Receipt Header ---");
-// your code here
+
 
 // ----------------------------------------------------------
 // TASK 7 — Build the receipt body
