@@ -201,7 +201,14 @@ console.log("Discount code valid: " + isValidCode);
 //    Write a comment: why does this produce "79.9944.99"?
 
 console.log("\n--- Task 5: Type Checks ---");
-// your code here
+
+// part a)
+console.log(`typeof line1Total: ${typeof line1Total}`);
+console.log(`typeof grandTotal: ${typeof grandTotal}`);
+
+
+
+
 
 // ----------------------------------------------------------
 // TASK 6 — Build the receipt header
