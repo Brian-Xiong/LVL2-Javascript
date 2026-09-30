@@ -105,8 +105,16 @@ function createTaskCard(task) {
 
   p.className = "task-title";
   p.textContent = task.title;
-  
 
+  // part 3)
+  const div = document.createElement("li");
+  div.className = "task-meta";
+
+  const prioritySpan = document.createElement("span");
+  prioritySpan.textContent = task.priority.toUpperCase();
+  prioritySpan.className = "👤 " + task.assignee;
+
+  
 }
 
 // ----------------------------------------------------------
