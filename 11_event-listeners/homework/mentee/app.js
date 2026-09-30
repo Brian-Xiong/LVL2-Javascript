@@ -93,7 +93,15 @@ const tasks = [
 //   7. Return the <li>
 
 function createTaskCard(task) {
-  // your code here
+  // part 1)
+  const li = document.createElement("li");
+
+  li.className = "task-card";
+  li.dataset.id = task.id;
+  li.dataset.priority = task.priority;
+
+
+  
 }
 
 // ----------------------------------------------------------
