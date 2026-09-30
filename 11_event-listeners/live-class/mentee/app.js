@@ -68,9 +68,9 @@ function handleThemeToggle() {
 
 // wire up the event listener here
 
-document
-  .getElementById("theme-btn")
-  .addEventListener("click", handleThemeToggle);
+// document
+//   .getElementById("theme-btn")
+//   .addEventListener("click", handleThemeToggle);
 
 // TASK 2 — change event (status selector)
 // Declare a function called handleStatusChange.
@@ -106,9 +106,9 @@ function handleStatusChange(event) {
   }
 }
 
-document
-  .getElementById("status-select")
-  .addEventListener("change", handleStatusChange);
+// document
+//   .getElementById("status-select")
+//   .addEventListener("change", handleStatusChange);
 
 // wire up the event listener here
 
@@ -151,8 +151,7 @@ function handleBioInput(event) {
 }
 
 // wire up the event listener here
-
-document.getElementById("bio-input").addEventListener("input", handleBioInput);
+// document.getElementById("bio-input").addEventListener("input", handleBioInput);
 
 // ----------------------------------------------------------
 // PART 3 — FORM SUBMIT + event.preventDefault()
@@ -229,9 +228,9 @@ function handleSkillSubmit(event) {
 }
 
 // wire up the event listener here
-document
-  .getElementById("add-skill-form")
-  .addEventListener("submit", handleSkillSubmit);
+// document
+//   .getElementById("add-skill-form")
+//   .addEventListener("submit", handleSkillSubmit);
 
 // ----------------------------------------------------------
 // PART 4 — KEYBOARD EVENTS
@@ -269,7 +268,7 @@ function handleKeyDown(event) {
 }
 
 // wire up to document here
-document.addEventListener("keydown", handleKeyDown);
+// document.addEventListener("keydown", handleKeyDown);
 
 
 // ----------------------------------------------------------
@@ -320,7 +319,8 @@ function handleSkillClick(event) {
 }
 
 // wire up the event listener here
-document.getElementByIT("skills-list").addEventListener("click", handleSkillClick);
+// document.getElementByIT("skills-list").addEventListener("click", handleSkillClick);
+
 // event.target is the actual element that was clicked
 // event.currentTarget is the parent of the element that was clicked
 
@@ -354,7 +354,6 @@ function init() {
   handleBioInput(bioEl);
 }
 
-// TODO add allEventListener calls here!!!!!!!!!!!!!!!!!!
 
 // ============================================================
 // WIRE UP ALL LISTENERS (above init)
@@ -363,8 +362,22 @@ function init() {
 // above the init() call at the very bottom.
 
 // ============================================================
-// START THE PAGE
+// Task 8 - START THE PAGE
 // ============================================================
+
+document
+  .getElementById("theme-btn")
+  .addEventListener("click", handleThemeToggle);
+document
+  .getElementById("status-select")
+  .addEventListener("change", handleStatusChange);
+document.getElementById("bio-input").addEventListener("input", handleBioInput);
+document
+  .getElementById("add-skill-form")
+  .addEventListener("submit", handleSkillSubmit);
+document.addEventListener("keydown", handleKeyDown);
+document.getElementByIT("skills-list").addEventListener("click", handleSkillClick);
+
 init();
 
 //FOOTNOTE
