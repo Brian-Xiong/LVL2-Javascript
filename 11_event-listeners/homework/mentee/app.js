@@ -100,8 +100,13 @@ function createTaskCard(task) {
   li.dataset.id = task.id;
   li.dataset.priority = task.priority;
 
+  // part 2)
+  const p = document.createElement("p");
 
+  p.className = "task-title";
+  p.textContent = task.title;
   
+
 }
 
 // ----------------------------------------------------------
