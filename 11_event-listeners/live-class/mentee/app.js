@@ -349,7 +349,9 @@ function init() {
   const skillsList = document.getElementById("skills-list");
   skillsList.forEach(skill =>  addSkillToPage(skill));
 
-
+  // part 2)
+  const bioEl = document.getElementById("bio-input");
+  handleBioInput(bioEl);
 }
 
 // TODO add allEventListener calls here!!!!!!!!!!!!!!!!!!
