@@ -267,9 +267,10 @@ function handleKeyDown(event) {
     document.getElementById("skill-input").value = "";
   }
 }
-document.addEventListener("keydown", handleKeyDown);
 
 // wire up to document here
+document.addEventListener("keydown", handleKeyDown);
+
 
 // ----------------------------------------------------------
 // PART 5 — EVENT DELEGATION
@@ -310,11 +311,18 @@ document.addEventListener("keydown", handleKeyDown);
 // Write a comment: what is the difference between
 // event.target and event.currentTarget here?
 
+// add one listener to the parent
 function handleSkillClick(event) {
-  // your code here
+  if (event.target.tagName === "LI") {
+    event.target.remove();
+    updateSkillCount();
+  }
 }
 
 // wire up the event listener here
+document.getElementByIT("skills-list").addEventListener("click", handleSkillClick);
+// event.target is the actual element that was clicked
+// event.currentTarget is the parent of the element that was clicked
 
 // ----------------------------------------------------------
 // PART 6 — PAGE INITIALISATION
@@ -337,8 +345,14 @@ function handleSkillClick(event) {
 // ABOVE init() — they run as the script loads.
 
 function init() {
-  // your code here
+  // part 1)
+  const skillsList = document.getElementById("skills-list");
+  skillsList.forEach(skill =>  addSkillToPage(skill));
+
+
 }
+
+// TODO add allEventListener calls here!!!!!!!!!!!!!!!!!!
 
 // ============================================================
 // WIRE UP ALL LISTENERS (above init)
