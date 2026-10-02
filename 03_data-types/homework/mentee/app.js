@@ -239,8 +239,19 @@ console.log(`Item1Price(number) + Item2Price (number) = ${Number(item1Price) + N
 // (Use the clean variables from Task 1)
 
 console.log("\n--- Task 6: Receipt Header ---");
+const receiptHeader = `
+ ================================
+ ${titleStore}
+ ================================
+ Customer: ${titleCustomer}
+ Email:    ${cleanEmail}
+ Date:     ${orderDate}
+ Code:     ${cleanCode}
+ ================================`;
 
+ console.log(receiptHeader);
 
+ 
 // ----------------------------------------------------------
 // TASK 7 — Build the receipt body
 // ----------------------------------------------------------
