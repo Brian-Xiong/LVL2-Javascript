@@ -251,7 +251,7 @@ const receiptHeader = `
 
  console.log(receiptHeader);
 
- 
+
 // ----------------------------------------------------------
 // TASK 7 — Build the receipt body
 // ----------------------------------------------------------
@@ -276,7 +276,18 @@ const receiptHeader = `
 // Log receiptBody.
 
 console.log("\n--- Task 7: Receipt Body ---");
-// your code here
+const receiptBody = ` 
+${item1Name.padEnd(22)}x${item1Qty}    $${line1Total.toFixed(2)}
+${item2Name.padEnd(22)}x${item2Qty}    $${line2Total.toFixed(2)}
+${item3Name.padEnd(22)}x${item3Qty}    $${line3Total.toFixed(2)}
+--------------------------------
+Subtotal:              $${subtotal.toFixed(2)}
+Discount (SAVE10 10%): -$${discountAmount.toFixed(2)}
+Tax (8%):              $${taxAmount.toFixed(2)}
+--------------------------------
+TOTAL:                 $${grandTotal.toFixed(2)}`;
+
+console.log(receiptBody);
 
 // ----------------------------------------------------------
 // TASK 8 — Connect the dots: full receipt
