@@ -132,15 +132,24 @@ renderHeader(tasks);
 
 function createTaskCard(task) {
   // Part 1)
-  const li = document.getElementById("task-card");
-  li.dataset.id = task.id;
+  const li = document.createElement("li");
+  li.classList.add("task-card") // classList.add lets you add classes to any element
+//  li.className // className helps replace previous classes 
+  li.dataset.id = task.id; // dataset lets you add (or read) custom data attributes
+
+{/* <li data-id="1"> Shower</li>
+
+<li data-id="2"> Cook</li> */}
 
   // Part 2)
-  const title = document.getElementById("task-title");
+  const title = document.createElement("p");
+  title.classList.add("task-title");
   title.textContent = task.title;
 
   // Part 3)
-  const meta = document.getElementById("task-meta"); // I'm pretty sure this is right
+  const meta = document.createElement("div"); // I'm pretty sure this is right
+  meta.classList.add("task-meta");
+
   const priority = document.createElement("span"); // idk if this is right...
   priority.textContent = task.priority.toUpperCase();
   priority.classList.add(`priority-${task.priority}`);
@@ -148,6 +157,20 @@ function createTaskCard(task) {
   const assignee = document.createElement("span");
   assignee.textContent = `👤 ${task.assignee}`;
 
+  meta.appendChild(priority); // .appendChild can only add one child
+  meta.appendChild(assignee);
+
+  // meta.append(priority, assignee) // .append can add multiple children
+
+  // part 4)
+  li.append(title, meta);
+
+  // part 5)
+  if (task.status === "done") {
+    li.classList.add("completed");
+  }
+
+  // part 6)
   return li;
 }
 
