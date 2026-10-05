@@ -309,6 +309,14 @@ console.log("\n--- Task 8: Full Receipt ---");
 const fullReceipt = receiptHeader + receiptBody;
 console.log(fullReceipt);
 
+// Q1: What lesson taught you about the + operator? 
+// Lesson 2 taught me about the + operator.  The + operator can be used to add numbers or to concatenate strings.  If one of the inputs is a string, then the + operator will concatenate the two inputs together instead of adding them as numbers.
+
+// Q2: What lesson taught you to clean string data? 
+// Lesson 3 taught me to clean string data by using string methods like .trim(), .toLowerCase(), .toUpperCase(), and .slice() to format strings in a consistent way.  
+
+// Q3: What would you need to learn to add a discount ONLY IF the code is valid? 
+// I would need to learn about conditionals (if/else statements) to add a discount only if the code is valid.  
 
 
 
