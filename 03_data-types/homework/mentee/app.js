@@ -348,3 +348,8 @@ console.log(fullReceipt);
 const totalItems = item1Qty + item2Qty + item3Qty;
 console.log(`Total items: ${totalItems}`);
 
+// part b)
+const highestPrice = Math.max(price1, price2, price3);
+console.log(`Highest price: $${highestPrice.toFixed(2)}`);
+
+
