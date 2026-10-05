@@ -306,7 +306,12 @@ console.log(receiptBody);
 // The last question previews exactly where the curriculum goes next.
 
 console.log("\n--- Task 8: Full Receipt ---");
-// your code here
+const fullReceipt = receiptHeader + receiptBody;
+console.log(fullReceipt);
+
+
+
+
 
 // ----------------------------------------------------------
 // ⭐ STRETCH GOAL — receipt stats
