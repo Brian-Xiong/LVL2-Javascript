@@ -257,14 +257,14 @@ updateCounts(tasks);
 // For now just build and attach the buttons so they appear.
 
 function addRemoveButtons() {
-  const allElements = document.querySelectorAll("task-card");
+  const allElements = document.querySelectorAll(".task-card"); // we use ".task-card" because we are selecting by class name
   
-  // I think the following 4 lines are right
   allElements.forEach((element) => {
-  element.classList.add("remove-btn");
-  element.textContent("X");
-  parent.appendChild(element);
-});
+  const button = document.createElement("button");
+  button.classList.add("remove-btn");
+  button.textContent = "Remove ✕";
+  element.appendChild(button);
+  });
 }
 
 addRemoveButtons();
@@ -284,16 +284,15 @@ addRemoveButtons();
 // This makes high-priority labels appear bolder.
 
 function highlightHighPriority() {
-  const HighPrio = document.querySelectorAll("priority-high");
+  const HighPrio = document.querySelectorAll(".priority-high");
 
   // Ok this looks right to me
   HighPrio.forEach((element) => {
-    const li = document.createElement("li");
-    li.style.fontWeight = "800";
+    element.style.fontWeight = "800";
   });
 }
 
-//highlightHighPriority();
+highlightHighPriority();
 
 // ----------------------------------------------------------
 // TASK 7 — addNewTask  (createElement full workflow)
