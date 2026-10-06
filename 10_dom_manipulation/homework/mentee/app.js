@@ -98,7 +98,7 @@ function renderHeader(taskList) {
   taskCount.textContent = `${taskList.length} tasks`; // display the amount of tasks in the talk list
 }
 
-renderHeader(tasks);
+//renderHeader(tasks);
 
 // ----------------------------------------------------------
 // TASK 2 — createTaskCard  (returns a DOM element)
@@ -211,7 +211,7 @@ function renderBoard(taskList) {
   });
 }
 
-renderBoard(tasks);
+//renderBoard(tasks);
 
 // ----------------------------------------------------------
 // TASK 4 — updateCounts
@@ -237,7 +237,7 @@ function updateCounts(taskList) {
   document.getElementById("pending-count").textContent = `⏳ ${pendingTasks.length} pending`;
 }
 
-updateCounts(tasks);
+//updateCounts(tasks);
 
 // ----------------------------------------------------------
 // TASK 5 — addRemoveButtons
@@ -267,7 +267,7 @@ function addRemoveButtons() {
   });
 }
 
-addRemoveButtons();
+//addRemoveButtons();
 
 // ----------------------------------------------------------
 // TASK 6 — highlightHighPriority
@@ -288,11 +288,11 @@ function highlightHighPriority() {
 
   // Ok this looks right to me
   HighPrio.forEach((element) => {
-    element.style.fontWeight = "800";
+    element.style.fontWeight = "900";
   });
 }
 
-highlightHighPriority();
+//highlightHighPriority();
 
 // ----------------------------------------------------------
 // TASK 7 — addNewTask  (createElement full workflow)
@@ -320,12 +320,12 @@ function addNewTask(title, assignee, priority = "medium", status = "todo") {
     id: Date.now(),
     title: title,
     assignee: assignee,
-    priority: "medium",
-    status: "todo",
+    priority: priority,
+    status: status,
   };
 
   // 2) Push new task into tasks array
-  tasks.push(newtask);
+  tasks.push(newTask);
 
   // 3) call createTaskCard
   const newCard = createTaskCard(newTask);
@@ -335,17 +335,17 @@ function addNewTask(title, assignee, priority = "medium", status = "todo") {
   list.appendChild(newCard);
 
   // 5) call updateCounts
-  //updateCounts(tasks);
+  updateCounts(tasks);
 
   // 6) make sure the new card has a remove button 
-  //addRemoveButtons();
+  addRemoveButtons();
 
   // 7) if the new card is a high priority, then bold the card
-  //highlightHighPriority();
-
+  highlightHighPriority();
 }
 
-
+// Call addNewTask to test it out
+// addNewTask("Write unit tests", "Carlos", "high");
 
 // ----------------------------------------------------------
 // TASK 8 — Connect the dots: renderAll
@@ -363,13 +363,13 @@ function addNewTask(title, assignee, priority = "medium", status = "todo") {
 // Call renderAll() at the bottom instead of calling
 // each function individually.
 
-//function renderAll() {
-//  renderHeader(tasks)
-//  renderBoard(tasks)
-//  updateCounts(tasks)
-//  addRemoveButtons()
-//  highlightHighPriority()
-//}
+function renderAll() {
+ renderHeader(tasks)
+ renderBoard(tasks)
+ updateCounts(tasks)
+ addRemoveButtons()
+  highlightHighPriority()
+}
 
 // ----------------------------------------------------------
 // ⭐ STRETCH GOAL — markComplete
@@ -391,12 +391,34 @@ function addNewTask(title, assignee, priority = "medium", status = "todo") {
 //
 // Write a comment: what is dataset used for?
 
-//function markComplete(taskId) {
-//  const taskArray = document.getElementById();
-//}
+function markComplete(taskId) {
+ // part 1) find the task with matching id
+  const task = tasks.find((task) => task.id === taskId);
+
+// part 2) if found, set task.status = "done"
+ if (task) {
+  task.status = "done";
+ }
+
+// part 3) select the task card element
+const card = document.querySelector(`[data-id='${taskId}']`);
+
+// part 4) if the card element exists, update and move it
+if (card) { 
+  card.classList.add("completed"); // add class "completed" to the card
+
+  const doneList = document.getElementById("list-done");
+  doneList.appendChild(card); // move the card to the done list
+}
+
+// part 5) refresh the stats
+updateCounts(tasks); 
+}
 
 // ============================================================
 // CALL YOUR FUNCTIONS HERE
 // ============================================================
 
-//markComplete();
+renderAll();
+markComplete(1); // Test markComplete by setting the task at index 1 as complete
+
