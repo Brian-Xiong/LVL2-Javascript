@@ -198,15 +198,15 @@ function renderBoard(taskList) {
   const inProgressList = document.getElementById("list-inprogress");
   const doneList = document.getElementById("list-done");
 
+  // create the task cards and put them in the appropriate column
   taskList.forEach((task) => {
-    const list = document.createElement("li");
-    createTaskCard(task);
+    const card = createTaskCard(task);
     if (task.status === "todo") {
-      todoList.appendChild(list);
+      todoList.appendChild(card);
     } else if (task.status === "inprogress") {
-      inProgressList.appendChild(list);
-    } else if (task.status === "done") {
-      doneList.appendChild(list);
+      inProgressList.appendChild(card);
+    } else {
+      doneList.appendChild(card);
     }
   });
 }
@@ -293,7 +293,7 @@ function highlightHighPriority() {
   });
 }
 
-highlightHighPriority();
+//highlightHighPriority();
 
 // ----------------------------------------------------------
 // TASK 7 — addNewTask  (createElement full workflow)
@@ -336,13 +336,13 @@ function addNewTask(title, assignee, priority = "medium", status = "todo") {
   list.appendChild(newCard);
 
   // 5) call updateCounts
-  updateCounts(tasks);
+  //updateCounts(tasks);
 
   // 6) make sure the new card has a remove button 
-  addRemoveButtons();
+  //addRemoveButtons();
 
   // 7) if the new card is a high priority, then bold the card
-  highlightHighPriority();
+  //highlightHighPriority();
 
 }
 
@@ -364,13 +364,13 @@ function addNewTask(title, assignee, priority = "medium", status = "todo") {
 // Call renderAll() at the bottom instead of calling
 // each function individually.
 
-function renderAll() {
-  renderHeader(tasks)
-  renderBoard(tasks)
-  updateCounts(tasks)
-  addRemoveButtons()
-  highlightHighPriority()
-}
+//function renderAll() {
+//  renderHeader(tasks)
+//  renderBoard(tasks)
+//  updateCounts(tasks)
+//  addRemoveButtons()
+//  highlightHighPriority()
+//}
 
 // ----------------------------------------------------------
 // ⭐ STRETCH GOAL — markComplete
@@ -392,12 +392,12 @@ function renderAll() {
 //
 // Write a comment: what is dataset used for?
 
-function markComplete(taskId) {
-  const taskArray = document.getElementById();
-}
+//function markComplete(taskId) {
+//  const taskArray = document.getElementById();
+//}
 
 // ============================================================
 // CALL YOUR FUNCTIONS HERE
 // ============================================================
 
-markComplete();
+//markComplete();
