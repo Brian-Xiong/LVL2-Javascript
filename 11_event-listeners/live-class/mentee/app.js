@@ -211,7 +211,7 @@ function addSkillToPage(skillName) {
     updateSkillCount();
   });
 
-  skillsList.append(li);
+  skillsList.append(li); // add the skill to the skill section of the page
   updateSkillCount();
 }
 

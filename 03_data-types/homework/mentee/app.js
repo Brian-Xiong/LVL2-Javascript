@@ -352,4 +352,8 @@ console.log(`Total items: ${totalItems}`);
 const highestPrice = Math.max(price1, price2, price3);
 console.log(`Highest price: $${highestPrice.toFixed(2)}`);
 
+// part c)
+const avgPrice = (price1 + price2 + price3) / 3;
+console.log(`Average price: $${avgPrice.toFixed(2)}`);
+
 

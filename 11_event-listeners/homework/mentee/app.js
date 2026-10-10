@@ -107,9 +107,12 @@ function createTaskCard(task) {
   p.textContent = task.title;
 
   // part 3)
-  const taskMeta = document.createElement("li");
+  const taskMeta = document.createElement("div");
   taskMeta.className = "task-meta";
   
+  
+  // part 4)
+
 }
 
 // ----------------------------------------------------------
