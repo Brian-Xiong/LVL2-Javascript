@@ -17,9 +17,11 @@ const titled = cleanname[0].toUpperCase() + cleanname.slice(1);
 console.log(`Hello, ${titled}!`);
 
 // What's wrong ↓
+// on line 16, the variable name is incorrectly written as "cleanname" instead of "cleanName". JavaScript is case-sensitive, so it doesn't recognize "cleanname" and returns undefined.
 
 // Your fix ↓
-
+// line 16 should be:
+// const titled = cleanName[0].toUpperCase() + cleanName.slide(1);
 
 // ----------------------------------------------------------
 // 🟡 DEBUG 2 — Medium
