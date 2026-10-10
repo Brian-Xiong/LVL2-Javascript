@@ -356,4 +356,6 @@ console.log(`Highest price: $${highestPrice.toFixed(2)}`);
 const avgPrice = (price1 + price2 + price3) / 3;
 console.log(`Average price: $${avgPrice.toFixed(2)}`);
 
-
+// part 4)
+const isInternalEmail = cleanEmail.endsWith("@pixelgadgets.com");
+console.log(`Internal customer: ${isInternalEmail}`);
