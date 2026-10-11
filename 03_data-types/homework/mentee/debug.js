@@ -64,7 +64,12 @@ const label = `Discount code: ${rawCode} — valid: ${isValid}`;
 console.log(label); // shows messy whitespace in the label
 
 // Bug 1 ↓
+// The comparison is done without cleaning the rawCode. It has extra whitespace and is in lowercase, while validCode is uppercase and has no whitespace. To fix this, we should trim and convert rawCode to uppercase before comparing it to validCode.
+// line 57 should be:
+// const isValid = rawCode.trim().toUpperCase() === validCode;
 
 // Bug 2 ↓
+// The label is built with the raw code, which includes extra whitespace. We should trim the rawCode before including it in the label.
+// line 61 should be:
+// const label = `Discount code: ${rawCode.trim()} — valid: ${isValid}`;
 
-// Your fix for both ↓
