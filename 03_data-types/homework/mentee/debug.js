@@ -38,8 +38,11 @@ const receipt   = `Total: $${itemPrice + lineTotal}`; // bug here
 console.log(receipt); // "Total: $79.99159.98" — wrong
 
 // What's wrong ↓
+// line 36 has a bug because item price is a string and when you use the + operator with a string and a number, it concatenates them instead of adding them. So instead of adding the lineTotal to itemPrice, it concatenates them as strings.
 
 // Your fix ↓
+// change itemPeice to a number before adding it to lineTotal. You can do this by using parseFloat or Number() function. For example:
+// const receipt = `Total: $${parseFloat(itemPrice) + lineTotal}`;
 
 
 // ----------------------------------------------------------
