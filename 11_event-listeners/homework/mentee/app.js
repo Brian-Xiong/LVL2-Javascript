@@ -138,7 +138,8 @@ function createTaskCard(task) {
   cardActions.append(completeBtn, removeBtn); // put buttons inside the div, "card-actions"
   li.append(p, taskMeta, cardActions); // put all the elements inside the li
 
-//  console.log("task.status:", task.status);
+  // part 7)
+  return li;
 }
 
 //document.getElementById("add-taskbtn").addEventListener("click", createTaskCard);
