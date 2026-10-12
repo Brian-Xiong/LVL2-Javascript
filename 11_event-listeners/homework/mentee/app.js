@@ -133,7 +133,10 @@ function createTaskCard(task) {
     li.classList.add("completed");
   }
 
-
+  // part 6)
+  taskMeta.append(prioritySpan, assigneeSpan); // put spans inside the div, "task-meta"
+  cardActions.append(completeBtn, removeBtn); // put buttons inside the div, "card-actions"
+  li.append(p, taskMeta, cardActions); // put all the elements inside the li
 
 //  console.log("task.status:", task.status);
 }
