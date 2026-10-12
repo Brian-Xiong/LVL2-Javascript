@@ -109,11 +109,22 @@ function createTaskCard(task) {
   // part 3)
   const taskMeta = document.createElement("div");
   taskMeta.className = "task-meta";
-  
+
+  const prioritySpan = document.createElement("span"); // create the span for priority
+  prioritySpan.className = task.priority;
+  prioritySpan.textContent = task.priority.toUpperCase();
+  const assigneeSpan = document.createElement("span");
+  assigneeSpan.textContent = "👤 " + task.assignee;
   
   // part 4)
 
+
+//  console.log("task.status:", task.status);
 }
+
+//document.getElementById("add-taskbtn").addEventListener("click", createTaskCard);
+
+
 
 // ----------------------------------------------------------
 // TASK 2 — renderBoard + updateCounts

@@ -67,6 +67,9 @@ function handleThemeToggle() {
 }
 
 // wire up the event listener here
+// document.getElementById("theme-btn").addEventListener("click", handleThemeToggle);
+// We pass handleThemeToggle (the function reference) so it runs only when the button is clicked
+// if we passed handleThemeToggle() (the function call), it would run immediately when the script loads, not when the button is clicked.
 
 // document
 //   .getElementById("theme-btn")
@@ -93,7 +96,7 @@ function handleThemeToggle() {
 function handleStatusChange(event) {
   const status = event.target.value;
   const badgeEl = document.getElementById("status-badge");
-  badgeEl.classList.remove("active", "away", "offline");
+  badgeEl.classList.remove("active", "away", "offline"); // remove all status classes first or else the badge will have multiple classes and look wrong
   if (status === "active") {
     badgeEl.textContent = "🟢 Active";
     badgeEl.classList.add("active");
@@ -106,9 +109,9 @@ function handleStatusChange(event) {
   }
 }
 
-// document
-//   .getElementById("status-select")
-//   .addEventListener("change", handleStatusChange);
+ document
+   .getElementById("status-select")
+   .addEventListener("change", handleStatusChange);
 
 // wire up the event listener here
 
