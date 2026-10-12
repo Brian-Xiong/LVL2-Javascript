@@ -117,7 +117,16 @@ function createTaskCard(task) {
   assigneeSpan.textContent = "👤 " + task.assignee;
   
   // part 4)
+  const cardActions = document.createElement("div");
+  cardActions.className = "card-actions";
 
+  const completeBtn = document.createElement("button");
+  completeBtn.className = "complete-btn";
+  completeBtn.textContent = "✅ Complete";
+
+  const removeBtn = document.createElement("button");
+  removeBtn.className = "remove-btn";
+  removeBtn.textContent = "🗑️ Remove";
 
 //  console.log("task.status:", task.status);
 }
