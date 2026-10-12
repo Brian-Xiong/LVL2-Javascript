@@ -128,6 +128,13 @@ function createTaskCard(task) {
   removeBtn.className = "remove-btn";
   removeBtn.textContent = "🗑️ Remove";
 
+  // part 5)
+  if (task.status === "done") {
+    li.classList.add("completed");
+  }
+
+
+
 //  console.log("task.status:", task.status);
 }
 
