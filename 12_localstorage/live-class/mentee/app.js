@@ -540,6 +540,7 @@ document
   .addEventListener("change", handleStatusChange);
 
 function handleStatusChange(event) {
+  event.preventDefault(); // is this necessary
   renderStatusBadge(event.target.value);
   saveProfile();
 }
