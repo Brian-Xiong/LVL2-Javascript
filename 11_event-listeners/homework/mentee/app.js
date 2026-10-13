@@ -180,11 +180,28 @@ function createTaskCard(task) {
 //   #count-done       → done.length          (just the number — no label)
 
 function updateCounts(taskList) {
-  // your code here
+
 }
 
 function renderBoard(taskList) {
-  // your code here
+  // clear all 3 lists first or else the new tasks will be appended to the old ones
+  document.getElementById("list-todo").innerHTML = "";
+  document.getElementById("list-inprogress").innerHTML = "";
+  document.getElementById("list-done").innerHTML = "";
+
+  // loop through the taskList, create a card for each task, and append it to the correct list based on its status
+  taskList.forEach((task) => {
+    const card = createTaskCard(task);
+    if (task.status === "todo") {
+      document.getElementById("list-todo").appendChild(card);
+    } else if (task.status === "inprogress") {
+      document.getElementById("list-inprogress").appendChild(card);
+    } else if (task.status === "done") {
+      document.getElementById("list-done").appendChild(card);
+    }
+  });
+
+  updateCounts(taskList);    
 }
 
 // ----------------------------------------------------------
@@ -211,10 +228,11 @@ function renderBoard(taskList) {
 //     .addEventListener("click", handleAddTask);
 
 function handleAddTask() {
-  // your code here
+
 }
 
 // wire up here
+
 
 // ----------------------------------------------------------
 // TASK 4 — handleBoardClick (event delegation for complete + remove)
@@ -327,7 +345,7 @@ function handleKeyDown(event) {
 // Call init() at the bottom.
 
 function init() {
-  // your code here
+  renderBoard(tasks);
 }
 
 // ----------------------------------------------------------
