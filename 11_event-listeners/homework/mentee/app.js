@@ -238,6 +238,11 @@ function renderBoard(taskList) {
 //     .addEventListener("click", handleAddTask);
 
 function handleAddTask() {
+// part 1)
+  const titleInput = document.getElementById("task-title-input").value.trim();
+  const assigneeInput = document.getElementById("task-assignee-input").value.trim();
+  const priorityInput = document.getElementById("task-priority-input").value;
+  const statusInput = document.getElementById("task-status-input").value;
 
 }
 
