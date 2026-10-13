@@ -244,12 +244,21 @@ function handleAddTask() {
   const priorityInput = document.getElementById("task-priority-input").value;
   const statusInput = document.getElementById("task-status-input").value;
 
-    // part 2)
+  // part 2)
   if (titleInput === "") {
     console.log("Title is required");
     return;
   }
 
+  // part 3)
+  // create a new task object
+  const newTask = {
+    id: Date.now(),
+    title: titleInput,
+    assignee: assigneeInput || "Unassigned",
+    priority: priorityInput,
+    status: statusInput,
+  };
 }
 
 // wire up here
