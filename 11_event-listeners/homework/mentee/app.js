@@ -180,7 +180,17 @@ function createTaskCard(task) {
 //   #count-done       → done.length          (just the number — no label)
 
 function updateCounts(taskList) {
+  const done = taskList.filter((task) => task.status === "done"); // get all tasks with status "done"
+  const pending = taskList.filter((task) => task.status !== "done");
+  const todo = taskList.filter((task) => task.status === "todo");
+  const inprogress = taskList.filter((task) => task.status === "inprogress");
 
+  document.getElementById("task-count").textContent = taskList.length + " tasks";
+  document.getElementById("completed-count").textContent = "✅ " + done.length + " done";
+  document.getElementById("pending-count").textContent = "⏳ " + pending.length + " pending";
+  document.getElementById("count-todo").textContent = todo.length;
+  document.getElementById("count-inprogress").textContent = inprogress.length;
+  document.getElementById("count-done").textContent = done.length;
 }
 
 function renderBoard(taskList) {
