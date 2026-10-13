@@ -244,6 +244,12 @@ function handleAddTask() {
   const priorityInput = document.getElementById("task-priority-input").value;
   const statusInput = document.getElementById("task-status-input").value;
 
+    // part 2)
+  if (titleInput === "") {
+    console.log("Title is required");
+    return;
+  }
+
 }
 
 // wire up here
