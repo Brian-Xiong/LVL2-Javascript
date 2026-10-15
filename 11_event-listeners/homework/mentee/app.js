@@ -262,6 +262,9 @@ function handleAddTask() {
   
   // part 4)
   tasks.push(newTask);
+
+  // part 5)
+  renderBoard(tasks);
 }
 
 // wire up here
