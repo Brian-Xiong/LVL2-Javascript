@@ -332,7 +332,13 @@ function handleBoardClick(event) {
     updateCounts(tasks);
   }
 
-
+    // part 3) if Remove button is clicked, remove the card completely and update the counts
+  if (target.classList.contains("remove-btn")) {
+    const index = tasks.findIndex((task) => task.id === taskId);
+    tasks.splice(index, 1);
+    card.remove();
+    updateCounts(tasks);
+  }
 }
 
 // wire up here
