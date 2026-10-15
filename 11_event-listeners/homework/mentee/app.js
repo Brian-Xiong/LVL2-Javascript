@@ -324,6 +324,15 @@ function handleBoardClick(event) {
   const taskId = parseInt(card.dataset.id);
   const task = tasks.find((t) => t.id === taskId);
 
+  // part 2) if Complete button is clicked, move the card to the done list and update its status to done
+  if (target.classList.contains("complete-btn")) {
+    task.status = "done";
+    card.classList.add("completed");
+    document.getElementById("list-done").appendChild(card);
+    updateCounts(tasks);
+  }
+
+
 }
 
 // wire up here
