@@ -265,6 +265,10 @@ function handleAddTask() {
 
   // part 5)
   renderBoard(tasks);
+
+  // part 6)
+  document.getElementById("task-title-input").value = "";
+  document.getElementById("task-assignee-input").value = "";
 }
 
 // wire up here
