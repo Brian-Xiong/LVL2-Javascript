@@ -259,10 +259,13 @@ function handleAddTask() {
     priority: priorityInput,
     status: statusInput,
   };
+  
+  // part 4)
+  tasks.push(newTask);
 }
 
 // wire up here
-
+document.getElementById("add-task-btn").addEventListener("click", handleAddTask);
 
 // ----------------------------------------------------------
 // TASK 4 — handleBoardClick (event delegation for complete + remove)
@@ -302,10 +305,11 @@ function handleAddTask() {
 // Write a comment: why use .closest() instead of event.target directly?
 
 function handleBoardClick(event) {
-  // your code here
+
 }
 
 // wire up here
+document.querySelector(".board").addEventListener("click", handleBoardClick)
 
 // ----------------------------------------------------------
 // TASK 5 — handleFilterClick (filter buttons)
