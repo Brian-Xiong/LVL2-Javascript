@@ -312,6 +312,17 @@ document.getElementById("add-task-btn").addEventListener("click", handleAddTask)
 // Write a comment: why use .closest() instead of event.target directly?
 
 function handleBoardClick(event) {
+  // part 1) See if we can get the clicked card
+  const target = event.target;
+  const card = target.closest(".task-card");
+
+  // if no card is found, return early
+  if(card === null) { 
+    return
+  }
+
+  const taskId = parseInt(card.dataset.id);
+  const task = tasks.find((t) => t.id === taskId);
 
 }
 
