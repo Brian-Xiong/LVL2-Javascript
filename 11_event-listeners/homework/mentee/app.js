@@ -332,7 +332,7 @@ function handleBoardClick(event) {
     updateCounts(tasks);
   }
 
-    // part 3) if Remove button is clicked, remove the card completely and update the counts
+  // part 3) if Remove button is clicked, remove the card completely and update the counts
   if (target.classList.contains("remove-btn")) {
     const index = tasks.findIndex((task) => task.id === taskId);
     tasks.splice(index, 1);
@@ -375,7 +375,12 @@ document.querySelector(".board").addEventListener("click", handleBoardClick)
 // individual listeners on each button?
 
 function handleFilterClick(event) {
-  // your code here
+  // part 1)
+  const filter = event.target.dataset.filter;
+  if (!filter) {
+    return; // the user clicked something that is not a button
+  }
+
 }
 
 // wire up here
