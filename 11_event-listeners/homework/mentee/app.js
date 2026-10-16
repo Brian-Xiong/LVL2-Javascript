@@ -375,12 +375,22 @@ document.querySelector(".board").addEventListener("click", handleBoardClick)
 // individual listeners on each button?
 
 function handleFilterClick(event) {
-  // part 1)
+  // part a)
   const filter = event.target.dataset.filter;
   if (!filter) {
     return; // the user clicked something that is not a button
   }
 
+  // part b) 
+  // remove "active" class from every button
+  const buttons = document.querySelectorAll(".filter-btn");
+  buttons.forEach((button) => {
+  buttons.classList.remove("active");  
+  })
+
+  event.target.classList.add("active");
+
+  
 }
 
 // wire up here
