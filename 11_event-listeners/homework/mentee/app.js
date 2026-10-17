@@ -425,10 +425,23 @@ document.querySelector(".header-right").addEventListener("click", handleFilterCl
 // Wire it up to document.
 
 function handleKeyDown(event) {
-  // your code here
+  // part a
+  if (event.key === "Escape") {
+    const taskTitle = document.getElementById("task-title-input");
+    taskTitle.textContent = "";
+
+    const taskAssignee = document.getElementById("task-assignee-input");
+    taskAssignee.textContent = "";
+
+    console.log ("Inputs cleared");
+  }
+
+
+
 }
 
 // wire up here
+
 
 // ----------------------------------------------------------
 // TASK 7 — Connect the dots: init
