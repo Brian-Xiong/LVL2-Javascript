@@ -385,15 +385,27 @@ function handleFilterClick(event) {
   // remove "active" class from every button
   const buttons = document.querySelectorAll(".filter-btn");
   buttons.forEach((button) => {
-  buttons.classList.remove("active");  
+    buttons.classList.remove("active");  
   })
 
   event.target.classList.add("active");
 
-  
+  // part c)
+  const taskCard = document.querySelectorAll(".task-card");
+  taskCard.forEach((card) => {
+    if (filter === "all") {
+      card.classList.remove("hidden");
+    } else if (card.dataset.priority === filter) {
+      card.classList.remove("hidden");
+    } else {
+      card.classList.add("hidden");
+    }})
+
 }
 
 // wire up here
+document.querySelector(".header-right").addEventListener("click", handleFilterClick);
+
 
 // ----------------------------------------------------------
 // TASK 6 — handleKeyDown (keyboard shortcuts)
