@@ -482,6 +482,21 @@ function init() {
 //
 // Write a comment: why use "input" and not "change" for live search?
 
+function handleSearch (event)  {
+  const query = event.target.value.toLowerCase().trim();
+  const taskCard = document.querySelectorAll("#task-card");
+
+  taskCard.forEach((card) => {
+    const title = card.querySelector("#task-title").textContent.toLowerCase();
+    if (title.includes(query)) {
+      card.classList.remove("hidden");
+    } else {
+      card.classList.add("hidden");
+    }
+  })
+}
+
+document.getElementById("search-input").addEventListener("input", handleSearch);
 
 
 // ============================================================
