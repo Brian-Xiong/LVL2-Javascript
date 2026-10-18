@@ -436,12 +436,15 @@ function handleKeyDown(event) {
     console.log ("Inputs cleared");
   }
 
-
+  // part b
+  if (event.key === "Enter" && event.target.id === "task-title-input") {
+    handleAddTask();
+  }
 
 }
 
 // wire up here
-
+document.addEventListener("keydown",handleKeyDown);
 
 // ----------------------------------------------------------
 // TASK 7 — Connect the dots: init
@@ -478,6 +481,8 @@ function init() {
 //     .addEventListener("input", handleSearch);
 //
 // Write a comment: why use "input" and not "change" for live search?
+
+
 
 // ============================================================
 // WIRE UP ALL LISTENERS (above init)
