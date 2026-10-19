@@ -32,7 +32,7 @@
 const studentName = "Brian Xiong";
 const maxScore = 100;
 const passingScore = 60;
-const earnedScore = 73;
+let earnedScore = 73;
 const isExtraCredit = false;
 
 
@@ -49,6 +49,20 @@ const isExtraCredit = false;
 //   ELSE             → log: "No extra credit."
 //
 // Then log the final earnedScore.
+
+const extraCreditPoints = 5;
+
+if (isExtraCredit) {
+    earnedScore += extraCreditPoints;
+    console.log("Extra credit applied!  New score: " + earnedScore);
+} else {
+    earnedScore += extraCreditPoints;
+    
+    console.log("No extra credit");
+}
+
+console.log(earnedScore);
+
 
 // ----------------------------------------------------------
 // TASK 3 — Calculate the percentage (operators)
