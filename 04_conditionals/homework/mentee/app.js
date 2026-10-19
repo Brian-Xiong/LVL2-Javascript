@@ -29,6 +29,15 @@
 //
 // Log: "Student: " + studentName
 
+const studentName = "Brian Xiong";
+const maxScore = 100;
+const passingScore = 60;
+const earnedScore = 73;
+const isExtraCredit = false;
+
+
+
+
 // ----------------------------------------------------------
 // TASK 2 — Apply extra credit (operators)
 // ----------------------------------------------------------
