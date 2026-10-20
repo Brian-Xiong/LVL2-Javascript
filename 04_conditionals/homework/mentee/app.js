@@ -158,6 +158,16 @@ if(earnedScore >= passingScore && attendancePercent >= minAttendance) {
 //   ELSE:
 //     log studentName + " did not qualify for Honor Roll."
 
+const honorRollThreshold = 90;
+const hasDisciplinaryNote = false;
+
+if (percentage >= honorRollThreshold && !hasDisciplinaryNote) {
+    console.log(studentName + " has made the Honor Roll");
+} else {
+    console.log(studentName + " did not qualify for Honor Roll");
+}
+
+
 // ----------------------------------------------------------
 // TASK 8 — Connect the dots summary
 // ----------------------------------------------------------
