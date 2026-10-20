@@ -133,6 +133,15 @@ if ( earnedScore >= passingScore ) {
 //   ELSE:
 //     log "🚫 Not eligible. Score: " + earnedScore + " | Attendance: " + attendancePercent + "%"
 
+const attendancePercent = 72;
+const minAttendance = 75;
+
+if(earnedScore >= passingScore && attendancePercent >= minAttendance) {
+    console.log("Eligible for final grade");
+} else {
+    console.log("Not eligible.  Score: " + earnedScore + " | Attendance: " + attendancePercent + "%");
+}
+
 // ----------------------------------------------------------
 // TASK 7 — Honor roll check (logical operators + !)
 // ----------------------------------------------------------
