@@ -110,6 +110,13 @@ if (percentage >= 90) {
 //   IF earnedScore >= passingScore → log studentName + " — PASSED ✅"
 //   ELSE                          → log studentName + " — FAILED ❌"
 
+
+if ( earnedScore >= passingScore ) {
+    console.log(studentName + "- Passed ");
+} else {
+    console.log(studentName + "- Failed");
+}
+
 // ----------------------------------------------------------
 // TASK 6 — Attendance check (logical operators)
 // ----------------------------------------------------------
