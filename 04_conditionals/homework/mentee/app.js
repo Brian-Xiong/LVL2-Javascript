@@ -71,6 +71,9 @@ console.log(earnedScore);
 //
 // Log: studentName + " scored " + percentage + "%"
 
+const percentage = (earnedScore / maxScore) * 100;
+console.log(studentName + " scored " + percentage + "%");
+
 // ----------------------------------------------------------
 // TASK 4 — Assign a letter grade (else if chain)
 // ----------------------------------------------------------
