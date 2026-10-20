@@ -87,6 +87,22 @@ console.log(studentName + " scored " + percentage + "%");
 //
 // ⚠️ Think carefully about the order. Why must 90 come before 80?
 
+if (percentage >= 90) {
+    console.log("Grade A");
+} else if (percentage >= 80) {
+    console.log("Grade B");
+} else if (percentage >= 70) {
+    console.log("Grade C")
+} else if (percentage >= 60) {
+    console.log("Grade D");
+} else {
+    console.log("Grade F");
+}
+
+// in this if else, order does matter.  Because if the order was flipped, "Grade A" would always be printed and the other checks would not occur
+
+
+
 // ----------------------------------------------------------
 // TASK 5 — Pass or fail (if/else + operators)
 // ----------------------------------------------------------
