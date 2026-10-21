@@ -230,4 +230,10 @@ const average = totalPoints / subjectCount;
 
 console.log("Average score: " + average);
 
+// part b)
 
+if (mathScore < 60 || scienceScore < 60 || englishScore < 60) {
+    console.log("⚠️  Warning: at least one subject needs attention.");
+} else {
+    console.log("✅ All subjects are passing.");
+}
