@@ -22,8 +22,11 @@ if (score = passing) {
 }
 
 // What's wrong ↓
+// the conditional on line 18 has only one equal sign: if (score = passing).  
+//  But we want to check if score is greater than or equal to passing.
 
 // Your fix ↓
+ // line 18  should be: if (score >= passing) 
 
 
 // ----------------------------------------------------------
