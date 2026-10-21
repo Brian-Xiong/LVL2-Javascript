@@ -218,3 +218,16 @@ if (earnedScore >= passingScore) {
 //
 // Hint for the || condition:
 //   mathScore < 60 || scienceScore < 60 || englishScore < 60
+
+// part a)
+let mathScore = 88;
+let scienceScore = 74;
+let englishScore = 91;
+
+const totalPoints = mathScore + scienceScore + englishScore;
+const subjectCount = 3;
+const average = totalPoints / subjectCount;
+
+console.log("Average score: " + average);
+
+
