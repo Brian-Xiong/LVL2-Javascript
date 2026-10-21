@@ -183,6 +183,15 @@ if (percentage >= honorRollThreshold && !hasDisciplinaryNote) {
 // 💡 Math.abs() removes the negative sign from a number.
 //    e.g. Math.abs(-7) → 7
 
+const pointsNeededToPass = passingScore - earnedScore;
+
+if (earnedScore >= passingScore) {
+    console.log(studentName + " passed with " + earnedScore + " points.");
+} else {
+    console.log(studentName + " needs " + Math.abs(pointsNeededToPass) + " more points to pass.");
+}
+
+
 // ----------------------------------------------------------
 // ⭐ STRETCH GOAL — Subject breakdown
 // ----------------------------------------------------------
