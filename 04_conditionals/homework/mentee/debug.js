@@ -47,8 +47,10 @@ if (height >= minHeight && withAdult) {
 }
 
 // What's wrong ↓
+// on line 43, the conditional should be an OR (aka ||) not and not an AND (aka &&)
 
 // Your fix ↓
+// line 43 should be if (height >= minHeight || withAdult)
 
 
 // ----------------------------------------------------------
