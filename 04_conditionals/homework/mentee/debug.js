@@ -74,6 +74,9 @@ if (orderTotal < 50) {
 }
 
 // Bug 1 ↓
+// line 63, the variable should be declared with const or let, NOT var.  
+// Var is unsafe, declares the variable as global (potential issues if you try to make another variable with the same name), 
+// and allows accidental declarations of the exact same variable name twice within the same scope. 
 
 // Bug 2 ↓
 
