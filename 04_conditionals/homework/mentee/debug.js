@@ -79,5 +79,6 @@ if (orderTotal < 50) {
 // and allows accidental declarations of the exact same variable name twice within the same scope. 
 
 // Bug 2 ↓
+// the if statements should be if else statements.  Therefore there is only one output, rather than two outputs
 
 // Your fix ↓
