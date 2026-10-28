@@ -36,6 +36,16 @@
 //   itemsSkipped     → 0                    (number — counter)
 //
 // Log: "🛒 " + storeName + " — Cart started"
+const storeName = "QuickShop";
+const budget = 100;
+let itemLimit = 30;
+let discountThreshold = 80;
+let discountRate = .1;
+let cartTotal = 0;
+let itemsAdded = 0;
+let itemsSkipped = 0;
+
+console.log("🛒 " + storeName + " — Cart started");
 
 // ----------------------------------------------------------
 // TASK 2 — Declare your item prices
