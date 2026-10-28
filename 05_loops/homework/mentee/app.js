@@ -58,6 +58,14 @@ console.log("🛒 " + storeName + " — Cart started");
 //   item5Price → 42
 //   item6Price → 28
 
+const item1Price = 22;
+const item2Price = 35;
+const item3Price = 15;
+const item4Price = 8;
+const item5Price = 42;
+const item6Price = 28;
+
+
 // ----------------------------------------------------------
 // TASK 3 — Loop through the items
 // ----------------------------------------------------------
