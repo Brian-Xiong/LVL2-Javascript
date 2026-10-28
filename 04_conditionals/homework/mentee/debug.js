@@ -82,3 +82,13 @@ if (orderTotal < 50) {
 // the if statements should be if else statements.  Therefore there is only one output, rather than two outputs
 
 // Your fix ↓
+// line 64, change to const orderTotal = 85;
+
+// the if statements should be if else statements
+ if (orderTotal >= 50) {
+  console.log("🚚 Standard shipping: $5");
+} else if (orderTotal >= 100) {
+  console.log("🚀 Free express shipping!");
+} else if (orderTotal < 50) {
+  console.log("📦 Economy shipping: $9.99");
+}
