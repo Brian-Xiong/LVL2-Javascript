@@ -85,6 +85,35 @@ const item6Price = 28;
 //     - increment itemsAdded using ++
 //     - log: "✅ Item " + i + " added ($" + currentPrice + ") | Cart: $" + cartTotal
 
+for(let i = 1; i <= 6; i++) {
+    let currentPrice = 0;
+    if (i === 1) {
+        currentPrice = item1Price;
+    } else if (i === 2) {
+        currentPrice = item2Price;
+    } else if (i === 3) {
+        currentPrice = item3Price;
+    } else if (i === 4) {
+        currentPrice = item4Price;
+    } else if (i === 5) {
+        currentPrice = item5Price;
+    } else if (i === 6) {
+        currentPrice = item6Price;
+    }
+    
+
+    if (currentPrice > itemLimit) {
+        console.log("Item " + i + " ($" + currentPrice + ") exceeds limit of $" + itemLimit);
+        itemsSkipped++;
+        continue;
+
+    } else {
+        cartTotal += currentPrice;
+        itemsAdded++;
+        console.log("✅ Item " + i + " added ($" + currentPrice + ") | Cart: $" + cartTotal);
+    }
+}
+
 // ----------------------------------------------------------
 // TASK 4 — Apply the discount (after the loop)
 // ----------------------------------------------------------
