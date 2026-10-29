@@ -127,6 +127,15 @@ for(let i = 1; i <= 6; i++) {
 //   ELSE:
 //     - log: "No discount applied. Total: $" + cartTotal
 
+if (cartTotal > discountThreshold) {
+    const discountAmount = cartTotal * discountRate;
+    cartTotal -= discountAmount;
+    console.log("Discount applied: -$" + discountAmount);
+    console.log("Total after discount: $" + cartTotal);
+} else {
+    console.log("No discount applied.  Total: $" + cartTotal);
+}
+
 // ----------------------------------------------------------
 // TASK 5 — Budget check
 // ----------------------------------------------------------
