@@ -149,6 +149,8 @@ if (cartTotal <= budget) {
 } else {
     console.log("Over budget by $" + (cartTotal - budget));
 }
+
+
 // ----------------------------------------------------------
 // TASK 6 — Cart summary
 // ----------------------------------------------------------
@@ -156,6 +158,11 @@ if (cartTotal <= budget) {
 //   "📦 Items added:   " + itemsAdded
 //   "🚫 Items skipped: " + itemsSkipped
 //   "🛒 Final total:   $" + cartTotal
+console.log("Items added: " + itemsAdded);
+console.log("Items skipped: " + itemsSkipped);
+console.log("Final total: " + cartTotal);
+
+
 
 // ----------------------------------------------------------
 // TASK 7 — while loop: restock counter
