@@ -144,7 +144,11 @@ if (cartTotal > discountThreshold) {
 //     log: "✅ Within budget! Total: $" + cartTotal + " / $" + budget
 //   ELSE:
 //     log: "❌ Over budget by $" + (cartTotal - budget)
-
+if (cartTotal <= budget) {
+    console.log("Within budget: Total: $" + cartTotal + " / $" + budget);
+} else {
+    console.log("Over budget by $" + (cartTotal - budget));
+}
 // ----------------------------------------------------------
 // TASK 6 — Cart summary
 // ----------------------------------------------------------
