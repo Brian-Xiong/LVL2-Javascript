@@ -243,3 +243,34 @@ if (!found) {
 //   log: "⭐ Item " + i + " earned " + currentPrice + " pts"
 //
 // After the loop, log: "🏆 Total loyalty points: " + loyaltyPoints
+
+let loyaltyPoints = 0;
+
+for (let i = 1; i <= 6; i++) {
+    let currentPrice = 0;
+    if (i === 1) {
+        currentPrice = item1Price;
+    } else if (i === 2) {
+        currentPrice = item2Price;
+    } else if (i === 3) {
+        currentPrice = item3Price;
+    } else if (i === 4) {
+        currentPrice = item4Price;
+    } else if (i === 5) {
+        currentPrice = item5Price;
+    } else if (i === 6) {
+        currentPrice = item6Price;
+    }
+
+    if (currentPrice > itemLimit) {
+        continue;
+    }
+
+
+
+}
+
+
+
+
+
