@@ -205,6 +205,24 @@ while (stock < maxStock) {
 // After the loop:
 //   IF found is false: log "😞 No affordable items found under $" + maxAffordable
 
+let found = false;
+const maxAffordable = 20;
+
+for (let i = 1; i <= 6; i++) {
+    let currentPrice = 0;
+
+    if (currentPrice <= maxAffordable && !found) {
+        console.log("First affordable item: Item " + i + " at $" + currentPrice);
+        found = true;
+        break;
+    }
+}
+
+if (!found) {
+    console.log("😞 No affordable items found under $" + maxAffordable);
+}
+
+
 // ----------------------------------------------------------
 // ⭐ STRETCH GOAL — Loyalty points
 // ----------------------------------------------------------
