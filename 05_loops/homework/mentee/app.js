@@ -266,11 +266,14 @@ for (let i = 1; i <= 6; i++) {
         continue;
     }
 
-
-
+    if (currentPrice < 15) {
+        loyaltyPoints += currentPrice * 2;
+        console.log("Double points for item " + i + "! +" + (currentPrice * 2) + " pts");
+    } else {
+        loyaltyPoints += currentPrice;
+        console.log("Item " + i + " earned " + currentPrice + " pts");
+    }
 }
 
-
-
-
+console.log("Total loyalty points: " + loyaltyPoints);
 
