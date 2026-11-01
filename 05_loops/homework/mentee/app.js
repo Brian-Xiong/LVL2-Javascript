@@ -178,6 +178,16 @@ console.log("Final total: " + cartTotal);
 //
 // After the loop, log: "✅ Fully restocked: " + stock + " units"
 
+let stock = 3;
+const restockAmount = 10;
+const maxStock = 50;
+
+while (stock < maxStock) {
+    stock += restockAmount;
+    console.log("Restocked.  Stock is now: " + stock);
+}
+
+
 // ----------------------------------------------------------
 // TASK 8 — Connect the dots: find the first affordable item
 // ----------------------------------------------------------
