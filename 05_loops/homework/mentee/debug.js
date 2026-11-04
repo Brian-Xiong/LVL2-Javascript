@@ -37,10 +37,17 @@ for (let i = 1; i <= 5; i++) {
 console.log("Sum: " + total);
 
 // What's wrong ↓
+// the variable "total" is being declared inside the for loop and only exsists inside of the for loop.  
+// It should be declared outside of the for loop so that it can be accessed after the loop is finished.
 
 // Your fix ↓
-
-
+// Declare total outside of the for loop:
+// let total = 0;
+// for (let i = 1; i <= 5; i++) {
+// total += i;
+// }
+// console.log("Sum: " + total);
+  
 // ----------------------------------------------------------
 // 🔴 DEBUG 3 — Hard
 // ----------------------------------------------------------
