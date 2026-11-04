@@ -17,8 +17,11 @@ for (let i = 1; i < 10; i++) {
 }
 
 // What's wrong ↓
+// inside the for loop, i < 10 is excluding 10.  it should be i <= 10 to include 10 in the loop 
 
 // Your fix ↓
+// line 15 should be;
+// for (let i = 1; i <= 10; i++) {
 
 
 // ----------------------------------------------------------

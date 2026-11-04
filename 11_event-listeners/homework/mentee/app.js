@@ -342,7 +342,7 @@ function handleBoardClick(event) {
 }
 
 // wire up here
-document.querySelector(".board").addEventListener("click", handleBoardClick)
+document.querySelector(".board").addEventListener("click", handleBoardClick);
 
 // ----------------------------------------------------------
 // TASK 5 — handleFilterClick (filter buttons)
@@ -385,7 +385,7 @@ function handleFilterClick(event) {
   // remove "active" class from every button
   const buttons = document.querySelectorAll(".filter-btn");
   buttons.forEach((button) => {
-    buttons.classList.remove("active");  
+    button.classList.remove("active");  
   })
 
   event.target.classList.add("active");

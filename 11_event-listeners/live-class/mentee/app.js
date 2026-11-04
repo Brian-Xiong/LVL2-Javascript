@@ -109,7 +109,7 @@ function handleStatusChange(event) {
   }
 }
 
- document
+document
    .getElementById("status-select")
    .addEventListener("change", handleStatusChange);
 
@@ -379,7 +379,7 @@ document
   .getElementById("add-skill-form")
   .addEventListener("submit", handleSkillSubmit);
 document.addEventListener("keydown", handleKeyDown);
-document.getElementByIT("skills-list").addEventListener("click", handleSkillClick);
+document.getElementById("skills-list").addEventListener("click", handleSkillClick);
 
 init();
 
