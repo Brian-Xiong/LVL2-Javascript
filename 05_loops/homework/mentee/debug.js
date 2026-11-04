@@ -47,7 +47,7 @@ console.log("Sum: " + total);
 // total += i;
 // }
 // console.log("Sum: " + total);
-  
+
 // ----------------------------------------------------------
 // 🔴 DEBUG 3 — Hard
 // ----------------------------------------------------------
@@ -66,7 +66,15 @@ for (let i = 1; i <= 10; i++) {
 console.log("Done!");
 
 // Bug 1 ↓
+// Currently the conditional is checking for even numbers (i % 2 === 0) instead of odd numbers
+// To check for odd numbers, it should be (i % 2 !== 0)
 
 // Bug 2 ↓
+// The continue statement is unnecessary here. It causes the loop to skip the console.log for odd numbers.
+
 
 // Your fix ↓
+// change the if loop to:
+// if (i % 2 !== 0)
+
+// and remove the else statement with continue. The loop will automatically continue to the next iteration if the condition is not met.
