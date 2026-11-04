@@ -31,6 +31,11 @@
 //
 // Log: "📚 " + className
 // Log: "Students enrolled: " + studentNames.length
+const className = "JavaScript Fundamentals"; // const because the class name won't change
+const passingScore = 60; // const because the passing score is a fixed threshold
+const studentNames = ["Alice", "Bob", "Charlie", "David", "Eva", "Frank"]; // const because the array reference won't change, even if we modify its contents
+const studentScores = [74, 58, 92, 65, 81, 47]; // const because the array reference won't change, even if we modify its contents
+
 
 // ----------------------------------------------------------
 // TASK 2 — Access and display by index
