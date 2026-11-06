@@ -73,6 +73,9 @@ console.log("Full studentScores array: " + studentScores);
 //   1. [name] → [score]
 //   2. [name] → [score]
 //   ...
+for (let i = 0; i < studentNames.length; i++){
+    console.log((i + 1) + ". " + studentNames[i] + " → " + studentScores[i]);
+}
 
 // ----------------------------------------------------------
 // TASK 5 — Calculate class stats
