@@ -58,6 +58,9 @@ console.log("third student score: " + studentScores[2]);
 //
 // Log: "Updated score for " + studentNames[3] + ": " + studentScores[3]
 // Log the full studentScores array to confirm the change.
+studentScores[3] = 72;
+console.log("Updated score for " + studentNames[3] + ": " + studentScores[3]);
+console.log("Full studentScores array: " + studentScores);
 
 // ----------------------------------------------------------
 // TASK 4 — Loop and display the full class
