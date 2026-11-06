@@ -46,6 +46,9 @@ const studentScores = [74, 58, 92, 65, 81, 47]; // const because the array refer
 //            + " — " + studentScores[studentScores.length - 1]
 //
 // Then log the score of the THIRD student (index 2).
+console.log("first student: " + studentNames[0] + " — " + studentScores[0]);
+console.log("last student: " + studentNames[studentNames.length - 1] + " — " + studentScores[studentScores.length - 1]);
+console.log("third student score: " + studentScores[2]);
 
 // ----------------------------------------------------------
 // TASK 3 — Update a score
