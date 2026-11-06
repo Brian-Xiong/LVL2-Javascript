@@ -146,6 +146,21 @@ console.log("Passed: " + passCount + " | Failed: " + failCount);
 //   below 60     → "F"
 //
 // Log: studentNames[i] + ": " + studentScores[i] + " — Grade " + grade
+for (let i = 0; i < studentScores.length; i ++) {
+    let grade;
+    if (studentScores[i] >= 90) {
+        grade = "A";
+    } else if (studentScores[i] >= 80) {
+        grade = "B";
+    } else if (studentScores[i] >= 70) {
+        grade = "C";
+    } else if (studentScores[i] >= 60) {
+        grade = "D";
+    } else {
+        grade = "F";
+    }
+    console.log(studentNames[i] + ": " + studentScores[i] + " — Grade " + grade);
+}
 
 // ----------------------------------------------------------
 // TASK 7 — Add and remove students
