@@ -102,6 +102,35 @@ for (let i = 0; i < studentNames.length; i++){
 //   Log: "Highest score: " + highScore
 //   Log: "Lowest score:  " + lowScore
 //   Log: "Passed: " + passCount + " | Failed: " + failCount
+let totalScore = 0;
+let highScore = 0;
+let lowScore = studentScores[0];
+let passCount = 0;
+let failCount = 0;
+
+for (let i = 0; i < studentScores.length; i++){
+    totalScore += studentScores[i];
+    if (studentScores[i] > highScore){
+        highScore = studentScores[i];
+    }
+    if (studentScores[i] < lowScore){
+        lowScore = studentScores[i];
+    }
+    if (studentScores[i] >= passingScore){
+        passCount++;
+    }
+    else {
+        failCount++;
+    }   
+}
+
+const classAverage = totalScore / studentScores.length;
+console.log("📊 Class Stats:");
+console.log("Average score: " + classAverage);
+console.log("Highest score: " + highScore);
+console.log("Lowest score:  " + lowScore);
+console.log("Passed: " + passCount + " | Failed: " + failCount);
+
 
 // ----------------------------------------------------------
 // TASK 6 — Assign letter grades
