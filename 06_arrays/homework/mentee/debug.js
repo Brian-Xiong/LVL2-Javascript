@@ -17,8 +17,13 @@ const middleIndex = letters.length / 2;
 console.log(letters[middleIndex]);
 
 // What's wrong ↓
+// letters.length returns 2.5 however array index must be whole numbers
 
 // Your fix ↓
+// use Math.floor() to get a round number
+// use line 16 should be:
+// const middleIndex = Math.floor(letters.length / 2);
+
 
 
 // ----------------------------------------------------------
