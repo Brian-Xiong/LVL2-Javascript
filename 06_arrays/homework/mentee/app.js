@@ -238,3 +238,23 @@ console.log("🏆 Top student: " + studentNames[topStudentIndex] + " with " + st
 //
 // Hint: compare studentScores[i] < passingScore &&
 //              curvedScores[i] >= passingScore
+const curvePoints = 5;
+let curvedScores = [];
+for (let i = 0; i < studentScores.length; i++) {
+    let curvedScore = studentScores[i] + curvePoints;  
+    if (curvedScore > 100) {
+        curvedScore = 100;
+    }
+    curvedScores.push(curvedScore);
+}
+
+console.log("Original scores: " + studentScores);
+console.log("Curved scores:   " + curvedScores);
+
+let newlyPassingCount = 0;
+for (let i = 0; i < curvedScores.length; i++) {
+    if (studentScores[i] < passingScore && curvedScores[i] >= passingScore) {
+        newlyPassingCount++;
+    }
+}
+console.log("Number of students now passing after curve: " + newlyPassingCount);
