@@ -178,6 +178,20 @@ for (let i = 0; i < studentScores.length; i ++) {
 // Store the removed name in a variable and log:
 //   "Student removed: " + removedName
 // Log: "Class size now: " + studentNames.length
+const newStudentName = "Grace";
+const newStudentScore = 88;
+
+studentNames.push(newStudentName);
+studentScores.push(newStudentScore);
+
+console.log("New student added: " + studentNames[studentNames.length - 1]);
+console.log("Class size now: " + studentNames.length);
+
+const removedName = studentNames.shift();
+studentScores.shift();
+
+console.log("Student removed: " + removedName);
+console.log("Class size now: " + studentNames.length);
 
 // ----------------------------------------------------------
 // TASK 8 — Connect the dots: find the top student
