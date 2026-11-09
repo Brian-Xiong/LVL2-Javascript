@@ -42,9 +42,10 @@ for (let i = 0; i <= prices.length; i++) {
 console.log("Total: $" + total);
 
 // What's wrong ↓
+// in the for loop i <= prices.length causes the loop to run an extra time and prices[i] will be out of the scope of the array
 
 // Your fix ↓
-
+// use i < prices.length instead of i <= prices.length
 
 // ----------------------------------------------------------
 // 🔴 DEBUG 3 — Hard
