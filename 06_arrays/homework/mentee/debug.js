@@ -70,7 +70,12 @@ for (let i = 0; i < scores.length; i++) {
 console.log("Winner: " + names[topIndex] + " with " + topScore);
 
 // Bug 1 ↓
+// Top index should start at 0 instead of 1, because arrays start at index 0
 
 // Bug 2 ↓
+// topScore should start at scores[0] to ensure that we have a number to start with instead of starting at zero
 
 // Your fix ↓
+// line 60 and 61 should be:
+// let topIndex = 0;
+// let topScore = score[0];
