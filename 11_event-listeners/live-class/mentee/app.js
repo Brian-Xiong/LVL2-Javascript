@@ -210,6 +210,7 @@ function addSkillToPage(skillName) {
 
   li.textContent = skillName;
   li.addEventListener("click", () => {
+    console.log("CLICK");
     li.remove();
     updateSkillCount();
   });
@@ -374,12 +375,17 @@ document
 document
   .getElementById("status-select")
   .addEventListener("change", handleStatusChange);
-document.getElementById("bio-input").addEventListener("input", handleBioInput);
+document
+  .getElementById("bio-input")
+  .addEventListener("input", handleBioInput);
 document
   .getElementById("add-skill-form")
   .addEventListener("submit", handleSkillSubmit);
-document.addEventListener("keydown", handleKeyDown);
-document.getElementById("skills-list").addEventListener("click", handleSkillClick);
+document
+  .addEventListener("keydown", handleKeyDown);
+document
+  .getElementById("skills-list")
+  .addEventListener("click", handleSkillClick);
 
 init();
 

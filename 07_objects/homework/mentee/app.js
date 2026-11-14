@@ -40,6 +40,52 @@
 //
 // Log: "📦 Inventory loaded: " + inventory.length + " products"
 
+const inventory = [
+  {
+    id: 1,
+    name: "Laptop",
+    category: "Electronics",
+    price: 899.99,
+    stock: 10,
+    isAvailable: true
+  },
+  {
+    id: 2,
+    name: "Headphones",
+    category: "Electronics",
+    price: 49.99,
+    stock: 3,
+    isAvailable: true
+  },
+  {
+    id: 3,
+    name: "T-Shirt",
+    category: "Clothing",
+    price: 15.99,
+    stock: 0,
+    isAvailable: false
+  },
+  {
+    id: 4,
+    name: "Apple",
+    category: "Food",
+    price: 0.99,
+    stock: 20,
+    isAvailable: true
+  },
+  {
+    id: 5,
+    name: "JavaScript Book",
+    category: "Books",
+    price: 29.99,
+    stock: 5,
+    isAvailable: true
+  }
+];
+
+// Log the inventory length
+console.log("📦 Inventory loaded: " + inventory.length + " products");
+
 // ----------------------------------------------------------
 // TASK 2 — Display all products
 // ----------------------------------------------------------
