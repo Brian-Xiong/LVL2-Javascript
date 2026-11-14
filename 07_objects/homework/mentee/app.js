@@ -97,6 +97,14 @@ console.log("📦 Inventory loaded: " + inventory.length + " products");
 //   + " | Stock: " + inventory[i].stock
 //   + " | " + (inventory[i].isAvailable ? "✅ Available" : "❌ Out of stock")
 
+for (let i = 0; i < inventory.length; i++) {
+    console.log(
+    "#" + inventory[i].id + " " + inventory[i].name
+    + " | $" + inventory[i].price
+    + " | Stock: " + inventory[i].stock
+    + " | " + (inventory[i].isAvailable ? "✅ Available" : "❌ Out of stock"));
+}
+
 // ----------------------------------------------------------
 // TASK 3 — Calculate inventory stats
 // ----------------------------------------------------------
