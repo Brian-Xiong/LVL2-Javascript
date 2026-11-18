@@ -128,6 +128,28 @@ for (let i = 0; i < inventory.length; i++) {
 //   "❌ Out of stock: "          + outOfStockCount + " product(s)"
 //   "⚠️  Low stock: "             + lowStockCount   + " product(s)"
 
+let totalValue      = 0;
+let totalItems      = 0;
+let outOfStockCount = 0;
+let lowStockCount   = 0;
+const lowStockThreshold = 5;
+
+for (let i = 0; i < inventory.length; i++) {
+  totalValue += price * stock;
+  totalItems += stock;
+  if (stock ===0) {
+    outOfStockCount++;
+  } else if (stock < lowStockThreshold) {
+    lowStockCount++
+  }
+}
+
+console.log("💰 Total inventory value: $" + totalValue);
+console.log("📦 Total items in stock: " + totalItems);
+console.log("❌ Out of stock: " + outOfStockCount + " product(s)");
+console.log("⚠️  Low stock: " + lowStockCount + " product(s)");
+
+
 // ----------------------------------------------------------
 // TASK 4 — Find products by category
 // ----------------------------------------------------------
