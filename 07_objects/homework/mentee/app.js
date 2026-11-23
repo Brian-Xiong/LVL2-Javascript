@@ -163,6 +163,15 @@ console.log("⚠️  Low stock: " + lowStockCount + " product(s)");
 //
 // After the loop:
 //   Log: "Found " + found + " product(s) in " + searchCategory
+const searchCategory = "Electronics";
+let found = 0;
+
+for (let i = 0; i < category; i++) {
+  if (inventory[i].category === searchCategory) {
+    found++;
+    console.log("🔍 " + inventory[i].name + " — $" + inventory[i].price);
+  }
+}
 
 // ----------------------------------------------------------
 // TASK 5 — Apply a sale discount
