@@ -214,6 +214,17 @@ for (let i=0; i < inventory.length; i++) {
 //     - Add 20 to inventory[i].stock
 //     - Log: "📦 Restock: " + inventory[i].name + " → " + inventory[i].stock + " units"
 
+for (let i=0; i < inventory.length; i++) {
+  if (stock === 0) {
+    inventory[i].stock += 50;
+    inventory[i].isAvailable = true;
+    console.log("🚚 Emergency restock: " + inventory[i].name + " → " + inventory[i].stock + " units");
+  } else if (stock < 5) {
+    inventory[i].stock += 20;
+    console.log("📦 Restock: " + inventory[i].name + " → " + inventory[i].stock + " units");
+  }
+}
+
 // ----------------------------------------------------------
 // TASK 7 — Access nested data
 // ----------------------------------------------------------
