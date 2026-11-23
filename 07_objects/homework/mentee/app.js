@@ -166,7 +166,7 @@ console.log("⚠️  Low stock: " + lowStockCount + " product(s)");
 const searchCategory = "Electronics";
 let found = 0;
 
-for (let i = 0; i < category; i++) {
+for (let i = 0; i < inventory.length; i++) {
   if (inventory[i].category === searchCategory) {
     found++;
     console.log("🔍 " + inventory[i].name + " — $" + inventory[i].price);
@@ -188,6 +188,16 @@ for (let i = 0; i < category; i++) {
 //     - Log: "🏷️  " + inventory[i].name + " discounted to $" + inventory[i].price
 //
 // After the loop, log the full inventory array to see updated prices.
+const discountRate = .15;
+
+for (let i=0; i < inventory.length; i++) {
+  if (inventory[i].category === "Electronics") {
+    const discountAmount = price * discountRate;
+    inventory[i].price -= discountAmount;
+    inventory[i].price = Math.round(inventory[i].price * 100) / 100;
+    console.log("🏷️  " + inventory[i].name + " discounted to $" + inventory[i].price);
+  }
+}
 
 // ----------------------------------------------------------
 // TASK 6 — Restock low inventory
